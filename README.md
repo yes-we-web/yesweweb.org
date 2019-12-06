@@ -19,9 +19,9 @@ This repos contain the community blog of promotion 2 "Yes We Web" & other upcomi
 
 ## Authors
 
-- [Samy Nasri](https://github.com/nasri2601) - Product Manager
-- [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner
-- [Donovan Ringot](https://github.com/DRINGOT) - Lead developer
+- [Samy Nasri](https://github.com/nasri2601) - Product Manager.
+- [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner.
+- [Donovan Ringot](https://github.com/DRINGOT) - Lead developer.
 
 ---
 
@@ -46,6 +46,6 @@ Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures p
 
 ## Auteurs
 
-- [Samy Nasri](https://github.com/nasri2601) - Chef de Projet
-- [Donovan Ringot](https://github.com/DRINGOT) - Lead Technique
-- [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner
+- [Samy Nasri](https://github.com/nasri2601) - Chef de Projet.
+- [Donovan Ringot](https://github.com/DRINGOT) - Lead Technique.
+- [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner.
