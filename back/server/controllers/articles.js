@@ -8,5 +8,10 @@ module.exports = {
     })
       .then(article => res.status(201).send(article))
       .catch(error => res.status(400).send(error));
+  },
+  list(req, res) {
+    return Article.findAll()
+      .then(articles => res.status(200).send(articles))
+      .catch(error => res.status(400).send(error));
   }
 };

@@ -8,4 +8,5 @@ module.exports = app => {
   );
 
   app.post("/api/articles", articlesController.create);
+  app.get("/api/articles", articlesController.list);
 };
