@@ -1,6 +1,6 @@
 # **YesWeWeb.org**
 
-This repos contain the community blog of promotion 2 "Yes We Web" & other upcoming promotions, powered,, by the group Vitamine T.
+This repos contain the community blog of promotion 2 "Yes We Web" & other upcoming promotions, powered by the group Vitamine T.
 
 ![Yes We Web Logo](imagesREADME/yesweweb.png)
 
@@ -46,6 +46,6 @@ Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures p
 
 ## Auteurs
 
-- [Samy Nasri](https://github.com/nasri2601) - Chef de Projet
-- [Donovan Ringot](https://github.com/DRINGOT) - Lead Technique
-- [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner
+- [Samy Nasri](https://github.com/nasri2601) - Chef de Projet.
+- [Donovan Ringot](https://github.com/DRINGOT) - Lead Technique.
+- [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner.
