@@ -1,4 +1,4 @@
-# YesWeWeb.org
+# **YesWeWeb.org**
 
 This repos contain the community blog of promotion 2 "Yes We Web" & other upcoming promotions, powered by the group Vitamine T.
 
