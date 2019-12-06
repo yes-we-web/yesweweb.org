@@ -14,6 +14,7 @@ This repos contain the community blog of promotion 2 "Yes We Web" & other upcomi
 - [Sequelize](https://github.com/sequelize/sequelize) - An easy-to-use multi SQL dialect ORM for Node.js
 - [Express](https://github.com/expressjs/express) - Fast, unopinionated, minimalist web framework for node.
 - [Postgres](https://github.com/postgres/postgres) - open source object-relational database system
+- [Mocha](https://github.com/mochajs/mocha) - Javascript test framework for node.js & the browser.
 
 ## Authors
 
@@ -39,6 +40,7 @@ Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures p
 - [Sequelize](https://github.com/sequelize/sequelize) - ORM multi-SQL facile à utiliser pour Node.js
 - [Express](https://github.com/expressjs/express) - Web framework rapide pour node.js.
 - [Postgres](https://github.com/postgres/postgres) - Système de base données relationnelle objet open source
+- [Mocha](https://github.com/mochajs/mocha) - Cadre de test Javascript pour node.js et le navigateur.
 
 ## Auteurs
 
