@@ -1,7 +1,6 @@
 {
   "name": "back",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node ./bin/www",
@@ -24,5 +23,6 @@
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.5",
     "nodemon": "^2.0.1"
-  }
+  },
+  "description": ""
 }
