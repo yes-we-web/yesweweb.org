@@ -32,5 +32,19 @@ module.exports = {
       .catch(error => res.status(400).send(error));
   },
 
+  retrieve(req, res) {
+    return Article
+      .findByPk(req.params.articleId, {
 
+      })
+      .then(article => {
+        if (!article) {
+          return res.status(404).send({
+            message: 'Article Not Found',
+          });
+        }
+        return res.status(200).send(article);
+      })
+      .catch(error => res.status(400).send(error));
+  },
 };

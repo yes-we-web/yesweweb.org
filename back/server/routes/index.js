@@ -12,4 +12,5 @@ module.exports = router => {
   router.post("/api/articles", articlesController.create);
   router.get("/api/articles", articlesController.list);
   router.delete('/api/articles/:articleId', articlesController.destroy);
+  router.get('/api/articles/:articleId', articlesController.retrieve);
 };
