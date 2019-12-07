@@ -8,7 +8,8 @@ module.exports = router => {
       message: "Welcome to the Todos API!"
     })
   );
-
+  //Articles
   router.post("/api/articles", articlesController.create);
   router.get("/api/articles", articlesController.list);
+  router.delete('/api/articles/:articleId', articlesController.destroy);
 };
