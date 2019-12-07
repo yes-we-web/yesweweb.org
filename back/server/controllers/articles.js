@@ -47,4 +47,25 @@ module.exports = {
       })
       .catch(error => res.status(400).send(error));
   },
+  update(req, res) {
+    return Article
+      .findByPk(req.params.articleId, {
+
+      })
+      .then(article => {
+        if (!article) {
+          return res.status(404).send({
+            message: 'Article Not Found',
+          });
+        }
+        return article
+          .update({
+            title: req.body.title || article.title,
+            content: req.body.content || article.content
+          })
+          .then(() => res.status(200).send(article))  // Send back the updated todo.
+          .catch((error) => res.status(400).send(error));
+      })
+      .catch((error) => res.status(400).send(error));
+  },
 };

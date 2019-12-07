@@ -13,4 +13,5 @@ module.exports = router => {
   router.get("/api/articles", articlesController.list);
   router.delete('/api/articles/:articleId', articlesController.destroy);
   router.get('/api/articles/:articleId', articlesController.retrieve);
+  router.put('/api/articles/:articleId', articlesController.update);
 };
