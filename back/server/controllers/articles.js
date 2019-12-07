@@ -13,10 +13,6 @@ module.exports = {
     return Article.findAll()
       .then(articles => res.status(200).send(articles))
       .catch(error => res.status(400).send(error));
-<<<<<<< HEAD
-  }
-};
-=======
   },
 
   destroy(req, res) {
@@ -67,10 +63,9 @@ module.exports = {
             title: req.body.title || article.title,
             content: req.body.content || article.content
           })
-          .then(() => res.status(200).send(article))  // Send back the updated todo.
+          .then(() => res.status(200).send(article)) // Send back the updated todo.
           .catch((error) => res.status(400).send(error));
       })
       .catch((error) => res.status(400).send(error));
   },
 };
->>>>>>> devtest
