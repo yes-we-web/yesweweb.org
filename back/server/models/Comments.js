@@ -5,7 +5,10 @@ module.exports = (sequelize, DataTypes) => {
     complete: DataTypes.BOOLEAN
   }, {});
   Comments.associate = function(models) {
-    // associations can be defined here
+    Comments.belongsTo(models.Article, {
+      foreignKey: 'articleId',
+      onDelete: 'CASCADE',
+    });
   };
   return Comments;
 };
