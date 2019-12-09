@@ -1,0 +1,31 @@
+{
+  "name": "yesweweb.org",
+  "version": "1.0.0",
+  "description": "This repos contain the community blog of promotion 2 \"Yes We Web\" & other upcoming promotions, powered by the group Vitamine T.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yes-we-web/yesweweb.org.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yes-we-web/yesweweb.org/issues"
+  },
+  "homepage": "https://github.com/yes-we-web/yesweweb.org#readme",
+  "dependencies": {
+    "dotenv-extended": "^2.5.0",
+    "pg": "^7.14.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6"
+  }
+}
