@@ -10,12 +10,18 @@ module.exports = {
       .then(article => res.status(201).send(article))
       .catch(error => res.status(400).send(error));
   },
+  // list comments in article
   list(req, res) {
-    return Article.findAll()
+    return Article
+      .findAll({
+        include: [{
+          model: Comments,
+          as: 'comments',
+        }],
+      })
       .then(articles => res.status(200).send(articles))
       .catch(error => res.status(400).send(error));
   },
-
   destroy(req, res) {
     return Article
       .findByPk(req.params.articleId)
@@ -36,7 +42,10 @@ module.exports = {
   retrieve(req, res) {
     return Article
       .findByPk(req.params.articleId, {
-
+        include: [{
+          model: Comments,
+          as: 'comments',
+        }],
       })
       .then(article => {
         if (!article) {
@@ -51,7 +60,10 @@ module.exports = {
   update(req, res) {
     return Article
       .findByPk(req.params.articleId, {
-
+        include: [{
+          model: Comments,
+          as: 'comments',
+        }],
       })
       .then(article => {
         if (!article) {
@@ -69,16 +81,5 @@ module.exports = {
       })
       .catch((error) => res.status(400).send(error));
   },
-  // list comments in article
-  list(req, res) {
-    return Article
-      .findAll({
-        include: [{
-          model: Comments,
-          as: 'comments',
-        }],
-      })
-      .then(articles => res.status(200).send(articles))
-      .catch(error => res.status(400).send(error));
-  },
+
 };
