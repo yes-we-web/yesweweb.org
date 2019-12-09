@@ -15,7 +15,7 @@ module.exports = {
       .findOne({
           where: {
             id: req.params.commentsId,
-            todoId: req.params.articleId,
+            articleId: req.params.articleId,
           },
         })
       .then(comments => {
@@ -41,7 +41,7 @@ module.exports = {
       .findOne({
           where: {
             id: req.params.commentsId,
-            todoId: req.params.articleId,
+            articleId: req.params.articleId,
           },
         })
       .then(comments=> {
