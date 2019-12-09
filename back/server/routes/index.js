@@ -25,7 +25,7 @@ module.exports = router => {
 
   // Pour toute autre méthode de requête sur les éléments à faire, nous allons retourner "Méthode non autorisée"
   router.all('/api/articles/:articleId/comments', (req, res) =>
-  res.status(405).send({
-    message: 'Method Not Allowed',
-}));
+    res.status(405).send({
+      message: 'Method Not Allowed',
+    }));
 };
