@@ -6,7 +6,7 @@ const commentsController = require("../controllers").comments;
 module.exports = router => {
   router.get("/api", (req, res) =>
     res.status(200).send({
-      message: "Welcome to the Todos API!"
+      message: "Welcome to the yesweweb API!"
     })
   );
   //Articles
