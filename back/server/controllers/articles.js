@@ -1,4 +1,5 @@
 const Article = require("../models").Article;
+const Comments = require("../models").Comments;
 
 module.exports = {
   create(req, res) {
@@ -67,5 +68,17 @@ module.exports = {
           .catch((error) => res.status(400).send(error));
       })
       .catch((error) => res.status(400).send(error));
+  },
+  // list comments in article
+  list(req, res) {
+    return Article
+      .findAll({
+        include: [{
+          model: Comments,
+          as: 'comments',
+        }],
+      })
+      .then(articles => res.status(200).send(articles))
+      .catch(error => res.status(400).send(error));
   },
 };
