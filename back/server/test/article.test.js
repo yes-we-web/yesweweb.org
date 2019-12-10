@@ -19,12 +19,34 @@ describe("Articles", function() {
     });
   });
   describe("/POST Article", function() {
-    it("GET status", done => {
+    it("POST status", done => {
       chai
         .request(app)
         .post("/api/articles")
         .end((err, res) => {
           res.should.have.status(201);
+          done();
+        });
+    });
+  });
+  describe("/DELETE Article", function() {
+    it("DELETE status", done => {
+      chai
+        .request(app)
+        .delete("/api/articles/:articleId")
+        .end((err, res) => {
+          res.should.have.status(400);
+          done();
+        });
+    });
+  });
+  describe("/PUT Article", function() {
+    it("PUT status", done => {
+      chai
+        .request(app)
+        .put("/api/articles/:articleId")
+        .end((err, res) => {
+          res.should.have.status(400);
           done();
         });
     });
