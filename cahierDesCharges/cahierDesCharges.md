@@ -12,25 +12,25 @@
 
 **Email** : mathilde.debeaune@groupevitaminet.com
 
-1. Présentation du projet :
+1.  Présentation du projet :
 
-   1. Les objectifs du site.
+1.  Les objectifs du site.
 
-   2. Les cibles.
+1.  Les cibles.
 
-   3. Intervenants au projet.
+1.  Intervenants au projet.
 
-2. Graphisme et ergonomie :
+1.  Graphisme et ergonomie :
 
-   1. La charte graphique.
+1.  La charte graphique.
 
-   2. Wireframe et Maquettage.
+1.  Wireframe et Maquettage.
 
-3. Spécificités et livrables :
+1.  Spécificités et livrables :
 
-   1. Contenu du site.
+1.  Contenu du site.
 
-   2. Contraintes techniques.
+1.  Contraintes techniques.
 
 # 1. Présentation de l'entreprise
 
@@ -72,8 +72,6 @@ ATTENTE CHARTE GRAPHIQUE..
 
 Exemples de sites que le client aime : https://scotch.io/
 
-####
-
 #### 2. Wireframe et maquettage
 
 Pour les wireframes :
@@ -109,8 +107,6 @@ Les technologies utilisées pour le site sont :
 - **NuxtJS**
 
 - **Vuetify**
-
-- **TypeScript**
 
 - **Axios**
 
