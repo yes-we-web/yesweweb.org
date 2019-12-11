@@ -14,23 +14,23 @@
 
 1.  Présentation du projet :
 
-1.  Les objectifs du site.
+    1.  Les objectifs du site.
 
-1.  Les cibles.
+    2.  Les cibles.
 
-1.  Intervenants au projet.
+    3.  Intervenants au projet.
 
-1.  Graphisme et ergonomie :
+2.  Graphisme et ergonomie :
 
-1.  La charte graphique.
+    1.  La charte graphique.
 
-1.  Wireframe et Maquettage.
+    2.  Wireframe et Maquettage.
 
-1.  Spécificités et livrables :
+3.  Spécificités et livrables :
 
-1.  Contenu du site.
+    1.  Contenu du site.
 
-1.  Contraintes techniques.
+    2.  Contraintes techniques.
 
 # 1. Présentation de l'entreprise
 
