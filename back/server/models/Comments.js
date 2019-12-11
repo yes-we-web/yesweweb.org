@@ -1,4 +1,5 @@
-'use strict';
+"use strict";
+
 module.exports = (sequelize, DataTypes) => {
   const Comments = sequelize.define("Comments", {
     content: DataTypes.STRING,
