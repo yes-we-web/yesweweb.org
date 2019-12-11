@@ -36,11 +36,11 @@
 
 **Yes We Web**, c'est une formation courte et gratuite qui permet d'obtenir le titre professionnel Développeur Logiciel de Niveau III (équivalent Bac + 2) ! Cette formation est opérée par le **campus Vitaminte T** à Lesquin, co-financée par la **Fondation des Possibles** et la **Grande Ecole du Numérique**.
 
-#### 1. Les objectifs du site
+#### Les objectifs du site
 
 Le but de ce projet est de créer un blog communautaire de la promotion Yes We Web (actuel et à venir...), pouvoir avoir un lieu de partage entre apprenant où l'on puisse poster des articles, parler des technologies utilisés pendant la formation avec un système d'inscription et de connexion.
 
-#### 2. Les cibles
+#### Les cibles
 
 **Cibles principales** :
 
@@ -50,7 +50,7 @@ Les apprenants (actuels ou alumnus).
 
 Les visiteurs externes à la formation (patron, personnes intéressées par la formation, recruteurs, etc..).
 
-#### 3. Intervenants au projet
+#### Intervenants au projet
 
 -   **Samy Nasri** - _Chef de Projet_ : Il veille au bon déroulement du projet, il gère les tâches à effectuer (immédiates ou futures).
 
@@ -58,9 +58,9 @@ Les visiteurs externes à la formation (patron, personnes intéressées par la f
 
 -   **Antoine Gonçalves** - _Product Owner_ : Il est en lien direct avec le client, communicateur entre son équipe et le client.
 
-## 2. Graphisme et ergonomie
+## Graphisme et ergonomie
 
-#### 1. La charte graphique
+#### La charte graphique
 
 Un thème global bleu et vert aux couleurs de Yes We Web, bien organisé, classé par hashtag et couleurs.
 
@@ -68,7 +68,7 @@ ATTENTE CHARTE GRAPHIQUE..
 
 Exemples de sites que le client aime : <https://scotch.io/>
 
-#### 2. Wireframe et maquettage
+#### Wireframe et maquettage
 
 Pour les wireframes :
 
@@ -86,13 +86,13 @@ Deux types de maquettages, type UML(Unified Modeling Language) :
 
 ![UML Diagram Use Cases](Images/UMLDiagramUseCase.png)
 
-## 3. Spécificités et livrables
+## Spécificités et livrables
 
-#### 1. Contenu du site
+#### Contenu du site
 
 Le site doit contenir un système de connexion et d'inscription pour les apprenants, où l'on puisse poser des articles pour la communauté en fonction des technologies dont on souhaite parler, on pourra également commenter les articles qui nous intéressent, mais également les liker. Pour trouver un article sur le site, un système d'hashtags/couleurs sera mis en place.
 
-#### 2. Contraintes techniques
+#### Contraintes techniques
 
 Serveur déjà fait en attente de production.
 
