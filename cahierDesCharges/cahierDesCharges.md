@@ -53,9 +53,7 @@ Les visiteurs externes à la formation (patron, personnes intéressées par la f
 ### Intervenants au projet
 
 -   **Samy Nasri** - _Chef de Projet_ : Il veille au bon déroulement du projet, il gère les tâches à effectuer (immédiates ou futures).
-
 -   **Donovan Ringot** - _Tech Lead_ : Il prend en charge tout ce qui est choix techniques, façon de travailler, technologies utilisées.
-
 -   **Antoine Gonçalves** - _Product Owner_ : Il est en lien direct avec le client, communicateur entre son équipe et le client.
 
 ## Graphisme et ergonomie
