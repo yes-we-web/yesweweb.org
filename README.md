@@ -26,7 +26,7 @@ This repos contain the community blog of promotion 2 "Yes We Web" & other upcomi
 
 ---
 
-# **FR**
+**FRANÇAIS**
 
 Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures promotions, maintenu par le groupe Vitamine T.
 
