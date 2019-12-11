@@ -1,9 +1,9 @@
 const express = require("express");
-const router = express.Router();
+const router = express.router();
 const articlesController = require("../controllers").articles;
 const commentsController = require("../controllers").comments;
 
-module.exports = router => {
+module.exports = (router) => {
   router.get("/api", (req, res) =>
     res.status(200).send({
       message: "Welcome to the yesweweb API!"
