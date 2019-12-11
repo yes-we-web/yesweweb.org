@@ -13,13 +13,18 @@
 **Email** : mathilde.debeaune@groupevitaminet.com
 
 1.  Présentation du projet :
+
     1.  Les objectifs du site.
     2.  Les cibles.
     3.  Intervenants au projet.
+
 2.  Graphisme et ergonomie :
+
     1.  La charte graphique.
     2.  Wireframe et Maquettage.
+    
 3.  Spécificités et livrables :
+
     1.  Contenu du site.
     2.  Contraintes techniques.
 
