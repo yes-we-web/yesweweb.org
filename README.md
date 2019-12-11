@@ -1,4 +1,4 @@
-# **YesWeWeb.org FR**
+# **YesWeWeb.org**
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6598145df9e245bc8b136be18204d2d4)](https://www.codacy.com/manual/yes-we-web/yesweweb.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yes-we-web/yesweweb.org&amp;utm_campaign=Badge_Grade)
 
@@ -26,7 +26,7 @@ This repos contain the community blog of promotion 2 "Yes We Web" & other upcomi
 
 ---
 
-# **YesWeWeb.org EN**
+# **FR**
 
 Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures promotions, maintenu par le groupe Vitamine T.
 
