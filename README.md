@@ -6,7 +6,7 @@ This repos contain the community blog of promotion 2 "Yes We Web" & other upcomi
 
 ![Yes We Web Logo](imagesREADME/yesweweb.png)
 
-### Built With
+ **Built With**
 
 -   [Nuxt.js](https://github.com/nuxt/nuxt.js) - The Vue.js Framework.
 -   [Vuetify](https://github.com/vuetifyjs/vuetify) - Material Component Framework for Vue.
