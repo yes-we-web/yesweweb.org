@@ -70,7 +70,7 @@ Un thème global bleu et vert aux couleurs de Yes We Web, bien organisé, class�
 
 ATTENTE CHARTE GRAPHIQUE..
 
-Exemples de sites que le client aime : https://scotch.io/
+Exemples de sites que le client aime : <https://scotch.io/>
 
 #### 2. Wireframe et maquettage
 
