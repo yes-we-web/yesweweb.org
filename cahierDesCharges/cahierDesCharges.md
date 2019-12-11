@@ -101,15 +101,9 @@ Au niveau de la maintenance du site, nous sommes dans l'attente d'une réponse p
 Les technologies utilisées pour le site sont :
 
 -   **NuxtJS**
-
 -   **Vuetify**
-
 -   **Axios**
-
 -   **NodeJS**
-
 -   **Postgres**
-
 -   **Sequelize**
-
 -   **Express**
