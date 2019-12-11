@@ -32,15 +32,13 @@
 
     2.  Contraintes techniques.
 
-# 1. Présentation de l'entreprise
+## 1. Présentation de l'entreprise
 
 **Yes We Web**, c'est une formation courte et gratuite qui permet d'obtenir le titre professionnel Développeur Logiciel de Niveau III (équivalent Bac + 2) ! Cette formation est opérée par le **campus Vitaminte T** à Lesquin, co-financée par la **Fondation des Possibles** et la **Grande Ecole du Numérique**.
 
 #### 1. Les objectifs du site
 
 Le but de ce projet est de créer un blog communautaire de la promotion Yes We Web (actuel et à venir...), pouvoir avoir un lieu de partage entre apprenant où l'on puisse poster des articles, parler des technologies utilisés pendant la formation avec un système d'inscription et de connexion.
-
-####
 
 #### 2. Les cibles
 
@@ -52,17 +50,15 @@ Les apprenants (actuels ou alumnus).
 
 Les visiteurs externes à la formation (patron, personnes intéressées par la formation, recruteurs, etc..).
 
-####
-
 #### 3. Intervenants au projet
 
-- **Samy Nasri** - _Chef de Projet_ : Il veille au bon déroulement du projet, il gère les tâches à effectuer (immédiates ou futures).
+-   **Samy Nasri** - _Chef de Projet_ : Il veille au bon déroulement du projet, il gère les tâches à effectuer (immédiates ou futures).
 
-- **Donovan Ringot** - _Tech Lead_ : Il prend en charge tout ce qui est choix techniques, façon de travailler, technologies utilisées.
+-   **Donovan Ringot** - _Tech Lead_ : Il prend en charge tout ce qui est choix techniques, façon de travailler, technologies utilisées.
 
-- **Antoine Gonçalves** - _Product Owner_ : Il est en lien direct avec le client, communicateur entre son équipe et le client.
+-   **Antoine Gonçalves** - _Product Owner_ : Il est en lien direct avec le client, communicateur entre son équipe et le client.
 
-# 2. Graphisme et ergonomie
+## 2. Graphisme et ergonomie
 
 #### 1. La charte graphique
 
@@ -82,15 +78,15 @@ Pour les maquettages :
 
 Deux types de maquettages, type UML(Unified Modeling Language) :
 
-- UML Diagramme de Classes :
+-   UML Diagramme de Classes :
 
 ![UML Diagram Class](Images/UMLDiagramClass.png)
 
-- UML Diagramme Cas d'utilisation :
+-   UML Diagramme Cas d'utilisation :
 
 ![UML Diagram Use Cases](Images/UMLDiagramUseCase.png)
 
-# 3. Spécificités et livrables
+## 3. Spécificités et livrables
 
 #### 1. Contenu du site
 
@@ -104,16 +100,16 @@ Au niveau de la maintenance du site, nous sommes dans l'attente d'une réponse p
 
 Les technologies utilisées pour le site sont :
 
-- **NuxtJS**
+-   **NuxtJS**
 
-- **Vuetify**
+-   **Vuetify**
 
-- **Axios**
+-   **Axios**
 
-- **NodeJS**
+-   **NodeJS**
 
-- **Postgres**
+-   **Postgres**
 
-- **Sequelize**
+-   **Sequelize**
 
-- **Express**
+-   **Express**
