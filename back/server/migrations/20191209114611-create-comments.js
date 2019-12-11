@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Comments', {
+    return queryInterface.createTable("Comments", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -24,16 +24,16 @@ module.exports = {
       },
       articleId: {
         type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
+        onDelete: "CASCADE",
         references: {
-          model: 'Articles',
-          key: 'id',
-          as: 'articleId',
+          model: "Articles",
+          key: "id",
+          as: "articleId",
         },
       },
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Comments');
+    return queryInterface.dropTable("Comments");
   }
 };
