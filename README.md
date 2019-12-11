@@ -1,4 +1,4 @@
-# **YesWeWeb.org**
+# **YesWeWeb.org FR**
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6598145df9e245bc8b136be18204d2d4)](https://www.codacy.com/manual/yes-we-web/yesweweb.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yes-we-web/yesweweb.org&amp;utm_campaign=Badge_Grade)
 
@@ -20,13 +20,13 @@ This repos contain the community blog of promotion 2 "Yes We Web" & other upcomi
 
 ## Authors
 
-- [Samy Nasri](https://github.com/nasri2601) - Product Manager.
-- [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner.
-- [Donovan Ringot](https://github.com/DRINGOT) - Lead developer.
+-   [Samy Nasri](https://github.com/nasri2601) - Product Manager.
+-   [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner.
+-   [Donovan Ringot](https://github.com/DRINGOT) - Lead developer.
 
 ---
 
-# **YesWeWeb.org**
+# **YesWeWeb.org EN**
 
 Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures promotions, maintenu par le groupe Vitamine T.
 
@@ -34,18 +34,18 @@ Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures p
 
 ## Fait avec
 
-- [Nuxt.js](https://github.com/nuxt/nuxtjs.org) - Le framework Vue.js.
-- [Vuetify](https://github.com/vuetifyjs/vuetify) - Framework CSS pour Vue.js.
-- [Node.js](https://github.com/nodejs/node) - Exécutable de Javascript côté serveur.
-- [Axios](https://github.com/axios/axios) - CLient HTTP pour le navigateur et node.js.
-- [Sequelize](https://github.com/sequelize/sequelize) - ORM multi-SQL facile à utiliser pour Node.js.
-- [Express](https://github.com/expressjs/express) - Web framework rapide pour node.js.
-- [Postgres](https://github.com/postgres/postgres) - Système de base données relationnelle objet open source.
-- [Mocha](https://github.com/mochajs/mocha) - Cadre de test Javascript pour node.js et le navigateur.
-- [Chai](https://github.com/chaijs/chai) - Cadre d'assertion BDD / TDD pour node.js et le navigateur.
+-   [Nuxt.js](https://github.com/nuxt/nuxtjs.org) - Le framework Vue.js.
+-   [Vuetify](https://github.com/vuetifyjs/vuetify) - Framework CSS pour Vue.js.
+-   [Node.js](https://github.com/nodejs/node) - Exécutable de Javascript côté serveur.
+-   [Axios](https://github.com/axios/axios) - CLient HTTP pour le navigateur et node.js.
+-   [Sequelize](https://github.com/sequelize/sequelize) - ORM multi-SQL facile à utiliser pour Node.js.
+-   [Express](https://github.com/expressjs/express) - Web framework rapide pour node.js.
+-   [Postgres](https://github.com/postgres/postgres) - Système de base données relationnelle objet open source.
+-   [Mocha](https://github.com/mochajs/mocha) - Cadre de test Javascript pour node.js et le navigateur.
+-   [Chai](https://github.com/chaijs/chai) - Cadre d'assertion BDD / TDD pour node.js et le navigateur.
 
 ## Auteurs
 
-- [Samy Nasri](https://github.com/nasri2601) - Chef de Projet.
-- [Donovan Ringot](https://github.com/DRINGOT) - Lead Technique.
-- [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner.
+-   [Samy Nasri](https://github.com/nasri2601) - Chef de Projet.
+-   [Donovan Ringot](https://github.com/DRINGOT) - Lead Technique.
+-   [Antoine Goncalves](https://github.com/Antoine-Goncalves) - Product Owner.
