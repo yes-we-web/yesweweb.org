@@ -8,7 +8,7 @@ module.exports = {
       })
       .then((comments) => res.status(201).send(comments))
       .catch((error) => res.status(400).send(error));
-      return result
+      return result;
   },
   async update(req, res) {
     let result = await  Comments.findOne({
