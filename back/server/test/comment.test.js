@@ -28,4 +28,15 @@ describe("Comments", function() {
         });
     });
   });
+  describe("/PUT Comments", function() {
+    it("PUT status", done => {
+      chai
+        .request(app)
+        .put("/api/articles/:articleId/comments/:commentsId")
+        .end((err, res) => {
+          res.should.have.status(400);
+          done();
+        });
+    });
+  });
 });
