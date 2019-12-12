@@ -1,1 +1,35 @@
-{"processes":{"781f0c71-8486-48cb-a3a2-2bb82340cb82":{"parent":null,"children":[]}},"files":{"/Users/admin/Desktop/yesweweb.org/back/app.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"],"/Users/admin/Desktop/yesweweb.org/back/server/routes/index.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"],"/Users/admin/Desktop/yesweweb.org/back/server/controllers/index.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"],"/Users/admin/Desktop/yesweweb.org/back/server/controllers/articles.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"],"/Users/admin/Desktop/yesweweb.org/back/server/models/index.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"],"/Users/admin/Desktop/yesweweb.org/back/server/config/config.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"],"/Users/admin/Desktop/yesweweb.org/back/server/models/Article.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"],"/Users/admin/Desktop/yesweweb.org/back/server/models/Comments.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"],"/Users/admin/Desktop/yesweweb.org/back/server/controllers/comments.js":["781f0c71-8486-48cb-a3a2-2bb82340cb82"]},"externalIds":{}}
+{
+  "processes": {
+    "c96ce5b0-ab68-415f-b2d6-3afb6b12696a": { "parent": null, "children": [] }
+  },
+  "files": {
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/app.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ],
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/server/routes/index.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ],
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/server/controllers/index.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ],
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/server/controllers/articles.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ],
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/server/models/index.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ],
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/server/config/config.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ],
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/server/models/Article.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ],
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/server/models/Comments.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ],
+    "/home/antoinegoncalves/sites/prod/Projet_Final/yesweweb.org/back/server/controllers/comments.js": [
+      "c96ce5b0-ab68-415f-b2d6-3afb6b12696a"
+    ]
+  },
+  "externalIds": {}
+}
