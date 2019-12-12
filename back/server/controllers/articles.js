@@ -2,17 +2,19 @@ const Article = require("../models").Article;
 const Comments = require("../models").Comments;
 
 module.exports = {
-  create(req, res) {
-    return Article.create({
+  async create(req, res) {
+
+    let result = await Article.create({
       title: req.body.title,
       content: req.body.content
     })
       .then((article) => res.status(201).send(article))
       .catch((error) => res.status(400).send(error));
+    return result;
   },
   // list comments in article
-  list(req, res) {
-    return Article.findAll({
+  async list(req, res) {
+    let result = await Article.findAll({
       include: [
         {
           model: Comments,
@@ -22,9 +24,10 @@ module.exports = {
     })
       .then((articles) => res.status(200).send(articles))
       .catch((error) => res.status(400).send(error));
+    return result;
   },
-  destroy(req, res) {
-    return Article.findByPk(req.params.articleId)
+  async destroy(req, res) {
+    let result = Article.findByPk(req.params.articleId)
       .then((article) => {
         if (!article) {
           return res.status(400).send({
@@ -37,10 +40,11 @@ module.exports = {
           .catch((error) => res.status(400).send(error));
       })
       .catch((error) => res.status(400).send(error));
+    return result;
   },
 
-  retrieve(req, res) {
-    return Article.findByPk(req.params.articleId, {
+  async retrieve(req, res) {
+    let result = await Article.findByPk(req.params.articleId, {
       include: [
         {
           model: Comments,
@@ -57,9 +61,10 @@ module.exports = {
         return res.status(200).send(article);
       })
       .catch((error) => res.status(400).send(error));
+    return result;
   },
-  update(req, res) {
-    return Article.findByPk(req.params.articleId, {
+  async update(req, res) {
+    let result = await Article.findByPk(req.params.articleId, {
       include: [
         {
           model: Comments,
@@ -78,9 +83,12 @@ module.exports = {
             title: req.body.title || article.title,
             content: req.body.content || article.content
           })
-          .then(() => res.status(200).send(article)) // Send back the updated todo.
+          .then(() => res.status(200).send(article)) // Send back the updated article.
           .catch((error) => res.status(400).send(error));
+
       })
       .catch((error) => res.status(400).send(error));
+    return result;
+
   }
 };
