@@ -1,18 +1,17 @@
 const Comments = require("../models").Comments;
 
 module.exports = {
-  create(req, res) {
-    return Comments
-      .create({
+  async create(req, res) {
+    let result = await Comments.create({
         content: req.body.content,
         articleId: req.params.articleId,
       })
       .then((comments) => res.status(201).send(comments))
       .catch((error) => res.status(400).send(error));
+      return result
   },
-  update(req, res) {
-    return Comments
-      .findOne({
+  async update(req, res) {
+    let result = await  Comments.findOne({
         where: {
           id: req.params.commentsId,
           articleId: req.params.articleId,
@@ -24,9 +23,7 @@ module.exports = {
             message: "Comments Not Found",
           });
         }
-
-        return comments
-          .update({
+        return comments.update({
             content: req.body.content || comments.content,
             complete: req.body.complete || comments.complete,
           })
@@ -34,11 +31,11 @@ module.exports = {
           .catch((error) => res.status(400).send(error));
       })
       .catch((error) => res.status(400).send(error));
+      return result;
   },
 
-  destroy(req, res) {
-    return Comments
-      .findOne({
+  async destroy(req, res) {
+    let result = await Comments.findOne({
         where: {
           id: req.params.commentsId,
           articleId: req.params.articleId,
@@ -57,5 +54,6 @@ module.exports = {
           .catch((error) => res.status(400).send(error));
       })
       .catch((error) => res.status(400).send(error));
+      return result
   },
 };
