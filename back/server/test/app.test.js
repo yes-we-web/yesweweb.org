@@ -17,7 +17,18 @@ describe("App", function() {
           });
       });
     });
+
+//server>routes>index
+// Méthode non autorisée
+describe("/ALL method", function() {
+  it("ALL status", done => {
+    chai
+      .request(app)
+      .get("/api/articles/:articleId/comments")
+      .end((err, res) => {
+        res.should.have.status(405);
+        done();
+      });
+  });
 });
-
-
-
+});
