@@ -13,8 +13,8 @@ module.exports = {
     return result;
   },
   // list comments in article
-  list(req, res) {
-    return Article.findAll({
+  async list(req, res) {
+    let result = await Article.findAll({
       include: [
         {
           model: Comments,
@@ -24,6 +24,7 @@ module.exports = {
     })
       .then((articles) => res.status(200).send(articles))
       .catch((error) => res.status(400).send(error));
+    return result;
   },
   destroy(req, res) {
     return Article.findByPk(req.params.articleId)
