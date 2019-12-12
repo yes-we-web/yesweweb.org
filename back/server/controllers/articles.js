@@ -43,8 +43,8 @@ module.exports = {
     return result;
   },
 
-  retrieve(req, res) {
-    return Article.findByPk(req.params.articleId, {
+  async retrieve(req, res) {
+    let result = await Article.findByPk(req.params.articleId, {
       include: [
         {
           model: Comments,
@@ -61,9 +61,10 @@ module.exports = {
         return res.status(200).send(article);
       })
       .catch((error) => res.status(400).send(error));
+    return result;
   },
-  update(req, res) {
-    return Article.findByPk(req.params.articleId, {
+  async update(req, res) {
+    let result = await Article.findByPk(req.params.articleId, {
       include: [
         {
           model: Comments,
@@ -82,9 +83,12 @@ module.exports = {
             title: req.body.title || article.title,
             content: req.body.content || article.content
           })
-          .then(() => res.status(200).send(article)) // Send back the updated todo.
+          .then(() => res.status(200).send(article)) // Send back the updated article.
           .catch((error) => res.status(400).send(error));
+
       })
       .catch((error) => res.status(400).send(error));
+    return result;
+
   }
 };
