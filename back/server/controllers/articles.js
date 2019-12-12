@@ -26,8 +26,8 @@ module.exports = {
       .catch((error) => res.status(400).send(error));
     return result;
   },
-  destroy(req, res) {
-    return Article.findByPk(req.params.articleId)
+  async destroy(req, res) {
+    let result = Article.findByPk(req.params.articleId)
       .then((article) => {
         if (!article) {
           return res.status(400).send({
@@ -40,6 +40,7 @@ module.exports = {
           .catch((error) => res.status(400).send(error));
       })
       .catch((error) => res.status(400).send(error));
+    return result;
   },
 
   retrieve(req, res) {
