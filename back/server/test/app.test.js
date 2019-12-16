@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 
 describe("App", function() {
     describe("/GET App", function() {
-      it("GET status", done => {
+      it("GET status", (done) => {
         chai
           .request(app)
           .get("/*")
@@ -21,7 +21,7 @@ describe("App", function() {
 //server>routes>index
 // Méthode non autorisée
 describe("/ALL method", function() {
-  it("ALL status", done => {
+  it("ALL status", (done) => {
     chai
       .request(app)
       .get("/api/articles/:articleId/comments")
