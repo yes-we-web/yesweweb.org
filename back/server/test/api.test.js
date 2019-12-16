@@ -5,7 +5,7 @@ const app = require("../../app");
 chai.use(chaiHttp);
 
 describe("/GET api", function() {
-  it("GET status", done => {
+  it("GET status", (done) => {
     chai
       .request(app)
       .get("/api")
