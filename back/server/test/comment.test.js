@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 
 describe("Comments", function() {
   describe("/POST Comments", function() {
-    it("POST status", done => {
+    it("POST status", (done) => {
       chai
         .request(app)
         .post("/api/articles/:articleId/comments")
@@ -18,7 +18,7 @@ describe("Comments", function() {
     });
   });
   describe("/DELETE Comments", function() {
-    it("DELETE status", done => {
+    it("DELETE status",(done) => {
       chai
         .request(app)
         .delete("/api/articles/:articleId/comments/:commentsId")
@@ -29,7 +29,7 @@ describe("Comments", function() {
     });
   });
   describe("/PUT Comments", function() {
-    it("PUT status", done => {
+    it("PUT status", (done) => {
       chai
         .request(app)
         .put("/api/articles/:articleId/comments/:commentsId")
