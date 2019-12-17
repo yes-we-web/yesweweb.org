@@ -28,7 +28,8 @@ module.exports = router => {
     commentsController.destroy
   );
 
-  //categories
+  // Categories
+
   router.post(
     "/api/articles/:articleId/categories",
     categoriesController.create

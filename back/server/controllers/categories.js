@@ -9,52 +9,5 @@ module.exports = {
       .then(categories => res.status(201).send(categories))
       .catch(error => res.status(400).send(error));
     return result;
-  },
-  async update(req, res) {
-    let result = await Categories.findOne({
-      where: {
-        id: req.params.categoriesId,
-        articleId: req.params.articleId
-      }
-    })
-      .then(categories => {
-        if (!categories) {
-          return res.status(404).send({
-            message: "Comments Not Found"
-          });
-        }
-        return categories
-          .update({
-            content: req.body.content || comments.content,
-            complete: req.body.complete || comments.complete
-          })
-          .then(updatedCategories => res.status(200).send(updatedCategories))
-          .catch(error => res.status(400).send(error));
-      })
-      .catch(error => res.status(400).send(error));
-    return result;
-  },
-
-  async destroy(req, res) {
-    let result = await Categories.findOne({
-      where: {
-        id: req.params.categoriesId,
-        articleId: req.params.articleId
-      }
-    })
-      .then(categories => {
-        if (!categories) {
-          return res.status(404).send({
-            message: "Comments Not Found"
-          });
-        }
-
-        return categories
-          .destroy()
-          .then(() => res.status(204).send())
-          .catch(error => res.status(400).send(error));
-      })
-      .catch(error => res.status(400).send(error));
-    return result;
   }
 };

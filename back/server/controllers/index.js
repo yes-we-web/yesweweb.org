@@ -1,6 +1,6 @@
 const articles = require("./articles");
-const categories = require("./categories");
 const comments = require("./comments");
+const categories = require("./categories");
 
 module.exports = {
   articles,

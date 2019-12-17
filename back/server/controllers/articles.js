@@ -20,7 +20,6 @@ module.exports = {
           model: Categories,
           as: "categories"
         },
-
         {
           model: Comments,
           as: "comments"
@@ -54,11 +53,6 @@ module.exports = {
         {
           model: Comments,
           as: "comments"
-        },
-
-        {
-          model: Categories,
-          as: "categories"
         }
       ]
     })
@@ -79,10 +73,6 @@ module.exports = {
         {
           model: Comments,
           as: "comments"
-        },
-        {
-          model: Categories,
-          as: "categories"
         }
       ]
     })
