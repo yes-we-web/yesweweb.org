@@ -1,13 +1,14 @@
 const Article = require("../models").Article;
 const Comments = require("../models").Comments;
+const Categories = require("../models").Categories;
 
 module.exports = {
   async create(req, res) {
 
     let result = await Article.create({
-      title: req.body.title,
-      content: req.body.content
-    })
+        title: req.body.title,
+        content: req.body.content
+      })
       .then((article) => res.status(201).send(article))
       .catch((error) => res.status(400).send(error));
     return result;
@@ -15,13 +16,16 @@ module.exports = {
   // list comments in article
   async list(req, res) {
     let result = await Article.findAll({
-      include: [
-        {
-          model: Comments,
-          as: "comments"
-        }
-      ]
-    })
+        include: [{
+            model: Comments,
+            as: "comments"
+          },
+          {
+            model: Categories,
+            as: "categories"
+          }
+        ]
+      })
       .then((articles) => res.status(200).send(articles))
       .catch((error) => res.status(400).send(error));
     return result;
@@ -45,13 +49,11 @@ module.exports = {
 
   async retrieve(req, res) {
     let result = await Article.findByPk(req.params.articleId, {
-      include: [
-        {
+        include: [{
           model: Comments,
           as: "comments"
-        }
-      ]
-    })
+        }]
+      })
       .then((article) => {
         if (!article) {
           return res.status(404).send({
@@ -65,13 +67,11 @@ module.exports = {
   },
   async update(req, res) {
     let result = await Article.findByPk(req.params.articleId, {
-      include: [
-        {
+        include: [{
           model: Comments,
           as: "comments"
-        }
-      ]
-    })
+        }]
+      })
       .then((article) => {
         if (!article) {
           return res.status(404).send({
