@@ -2,6 +2,7 @@ const express = require("express");
 //const router = express.Router();
 const articlesController = require("../controllers").articles;
 const commentsController = require("../controllers").comments;
+const categoriesController = require("../controllers").categories;
 
 module.exports = (router) => {
   router.get("/api", (req, res) =>
@@ -26,6 +27,10 @@ module.exports = (router) => {
     "/api/articles/:articleId/comments/:commentsId",
     commentsController.destroy
   );
+
+  // Categories
+
+  router.post('/api/articles/:articleId/categories', categoriesController.create);
 
   // Pour toute autre méthode de requête sur les éléments à faire, nous allons retourner "Méthode non autorisée"
   router.all("/api/articles/:articleId/comments", (req, res) =>
