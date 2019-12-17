@@ -34,7 +34,10 @@ module.exports = router => {
     "/api/articles/:articleId/categories",
     categoriesController.create
   );
-
+  router.put(
+    "/api/articles/:articleId/categories/:categoriesId",
+    categoriesController.update
+  );
   // Pour toute autre méthode de requête sur les éléments à faire, nous allons retourner "Méthode non autorisée"
   router.all("/api/articles/:articleId/comments", (req, res) =>
     res.status(405).send({
