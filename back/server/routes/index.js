@@ -2,8 +2,9 @@ const express = require("express");
 //const router = express.Router();
 const articlesController = require("../controllers").articles;
 const commentsController = require("../controllers").comments;
+const categoriesController = require("../controllers").categories;
 
-module.exports = (router) => {
+module.exports = router => {
   router.get("/api", (req, res) =>
     res.status(200).send({
       message: "Welcome to the yesweweb API!"
@@ -25,6 +26,12 @@ module.exports = (router) => {
   router.delete(
     "/api/articles/:articleId/comments/:commentsId",
     commentsController.destroy
+  );
+
+  //categories
+  router.post(
+    "/api/articles/:articleId/categories",
+    categoriesController.create
   );
 
   // Pour toute autre méthode de requête sur les éléments à faire, nous allons retourner "Méthode non autorisée"
