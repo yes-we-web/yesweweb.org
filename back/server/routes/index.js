@@ -38,6 +38,10 @@ module.exports = router => {
     "/api/articles/:articleId/categories/:categoriesId",
     categoriesController.update
   );
+  router.delete(
+    "/api/articles/:articleId/categories/:categoriesId",
+    categoriesController.destroy
+  );
   // Pour toute autre méthode de requête sur les éléments à faire, nous allons retourner "Méthode non autorisée"
   router.all("/api/articles/:articleId/comments", (req, res) =>
     res.status(405).send({
