@@ -17,14 +17,12 @@ module.exports = {
   async list(req, res) {
     let result = await Article.findAll({
         include: [{
-            model: Comments,
-            as: "comments"
-          },
-          {
-            model: Categories,
-            as: "categories"
-          }
-        ]
+          model: Categories,
+          as: "categories"
+        }, {
+          model: Comments,
+          as: "comments"
+        }]
       })
       .then((articles) => res.status(200).send(articles))
       .catch((error) => res.status(400).send(error));
