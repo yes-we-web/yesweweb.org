@@ -1,5 +1,6 @@
 const Article = require("../models").Article;
 const Comments = require("../models").Comments;
+const Categories = require("../models").Categories;
 
 module.exports = {
   async create(req, res) {
@@ -19,7 +20,10 @@ module.exports = {
         {
           model: Comments,
           as: "comments"
-        }
+        },
+      {model:Categories,
+        as:"categories"
+      }
       ]
     })
       .then((articles) => res.status(200).send(articles))
@@ -49,7 +53,10 @@ module.exports = {
         {
           model: Comments,
           as: "comments"
-        }
+        },
+      {model:Categories,
+        as:"categories"
+      }
       ]
     })
       .then((article) => {
@@ -69,7 +76,10 @@ module.exports = {
         {
           model: Comments,
           as: "comments"
-        }
+        },
+      {model:Categories,
+        as:"categories"
+      }
       ]
     })
       .then((article) => {
