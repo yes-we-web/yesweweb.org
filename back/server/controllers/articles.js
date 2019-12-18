@@ -23,10 +23,7 @@ module.exports = {
         {
           model: Comments,
           as: "comments"
-        },
-      {model:Categories,
-        as:"categories"
-      }
+        }
       ]
     })
       .then((articles) => res.status(200).send(articles))
@@ -35,7 +32,7 @@ module.exports = {
   },
   async destroy(req, res) {
     let result = Article.findByPk(req.params.articleId)
-      .then(article => {
+      .then((article) => {
         if (!article) {
           return res.status(400).send({
             message: "Article Not Found"
@@ -62,7 +59,7 @@ module.exports = {
       }
       ]
     })
-      .then(article => {
+      .then((article) => {
         if (!article) {
           return res.status(404).send({
             message: "Article Not Found"
@@ -99,7 +96,7 @@ module.exports = {
           .then(() => res.status(200).send(article)) // Send back the updated article.
           .catch((error) => res.status(400).send(error));
       })
-      .catch(error => res.status(400).send(error));
+      .catch((error) => res.status(400).send(error));
     return result;
   }
 };
