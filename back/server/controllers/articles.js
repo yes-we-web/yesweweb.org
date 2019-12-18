@@ -8,8 +8,8 @@ module.exports = {
       title: req.body.title,
       content: req.body.content
     })
-      .then(article => res.status(201).send(article))
-      .catch(error => res.status(400).send(error));
+      .then((article) => res.status(201).send(article))
+      .catch((error) => res.status(400).send(error));
     return result;
   },
   // list comments in article
@@ -29,8 +29,8 @@ module.exports = {
       }
       ]
     })
-      .then(articles => res.status(200).send(articles))
-      .catch(error => res.status(400).send(error));
+      .then((articles) => res.status(200).send(articles))
+      .catch((error) => res.status(400).send(error));
     return result;
   },
   async destroy(req, res) {
@@ -44,9 +44,9 @@ module.exports = {
         return article
           .destroy()
           .then(() => res.status(204).send())
-          .catch(error => res.status(400).send(error));
+          .catch((error) => res.status(400).send(error));
       })
-      .catch(error => res.status(400).send(error));
+      .catch((error) => res.status(400).send(error));
     return result;
   },
 
@@ -70,7 +70,7 @@ module.exports = {
         }
         return res.status(200).send(article);
       })
-      .catch(error => res.status(400).send(error));
+      .catch((error) => res.status(400).send(error));
     return result;
   },
   async update(req, res) {
@@ -85,7 +85,7 @@ module.exports = {
       }
       ]
     })
-      .then(article => {
+      .then((article) => {
         if (!article) {
           return res.status(404).send({
             message: "Article Not Found"
@@ -97,7 +97,7 @@ module.exports = {
             content: req.body.content || article.content
           })
           .then(() => res.status(200).send(article)) // Send back the updated article.
-          .catch(error => res.status(400).send(error));
+          .catch((error) => res.status(400).send(error));
       })
       .catch(error => res.status(400).send(error));
     return result;
