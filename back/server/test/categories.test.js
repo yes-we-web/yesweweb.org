@@ -29,3 +29,14 @@ describe("/DELETE Categories", function() {
       });
   });
 });
+describe("/PUT Categories", function() {
+  it("PUT status", done => {
+    chai
+      .request(app)
+      .put("/api/articles/:articleId/categories/:categoriesId")
+      .end((err, res) => {
+        res.should.have.status(400);
+        done();
+      });
+  });
+});
