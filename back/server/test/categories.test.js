@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 
 describe("Categories", function() {
   describe("/POST Categories", function() {
-    it("POST status", done => {
+    it("POST status", (done) => {
       chai
         .request(app)
         .post("/api/articles/:articleId/categories")
@@ -19,7 +19,7 @@ describe("Categories", function() {
   });
 });
 describe("/DELETE Categories", function() {
-  it("DELETE status", done => {
+  it("DELETE status", (done) => {
     chai
       .request(app)
       .delete("/api/articles/:articleId/categories/:categoriesId")
@@ -30,7 +30,7 @@ describe("/DELETE Categories", function() {
   });
 });
 describe("/PUT Categories", function() {
-  it("PUT status", done => {
+  it("PUT status", (done) => {
     chai
       .request(app)
       .put("/api/articles/:articleId/categories/:categoriesId")
