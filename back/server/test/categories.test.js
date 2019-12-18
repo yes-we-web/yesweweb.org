@@ -18,3 +18,14 @@ describe("Categories", function() {
     });
   });
 });
+describe("/DELETE Categories", function() {
+  it("DELETE status", done => {
+    chai
+      .request(app)
+      .delete("/api/articles/:articleId/categories/:categoriesId")
+      .end((err, res) => {
+        res.should.have.status(400);
+        done();
+      });
+  });
+});
