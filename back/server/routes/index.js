@@ -4,7 +4,7 @@ const articlesController = require("../controllers").articles;
 const commentsController = require("../controllers").comments;
 const categoriesController = require("../controllers").categories;
 
-module.exports = router => {
+module.exports = (router) => {
   router.get("/api", (req, res) =>
     res.status(200).send({
       message: "Welcome to the yesweweb API!"
@@ -19,6 +19,16 @@ module.exports = router => {
 
   //Comments
   router.post("/api/articles/:articleId/comments", commentsController.create);
+  router.put(
+    "/api/articles/:articleId/comments/:commentsId",
+    commentsController.update
+  );
+  router.delete(
+    "/api/articles/:articleId/comments/:commentsId",
+    commentsController.destroy
+  );
+  //Categories
+  router.post("/api/articles/:articleId/categories", categoriesController.create);
   router.put(
     "/api/articles/:articleId/comments/:commentsId",
     commentsController.update
