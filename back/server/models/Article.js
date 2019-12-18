@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     Article.hasMany(models.Categories, {
       foreignKey: "articleId",
-      as: "categories",
+      as: "categories"
     });
   };
   return Article;
