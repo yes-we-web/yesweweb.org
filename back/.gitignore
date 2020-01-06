@@ -1,4 +1,4 @@
 node_modules
 .env
 .nyc_output
-utils/jwt.utils.js
+utils
