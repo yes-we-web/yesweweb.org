@@ -94,11 +94,13 @@ module.exports = {
         return res.status(500).json({ error: "unable to verify user" });
       });
   },
-  getUserProfile: function(req, res) {
+  getUserProfile(req, res) {
     const headerAuth = req.headers["authorization"];
     const userId = jwtUtils.getUserId(headerAuth);
 
-    if (userId < 0) return res.status(400).json({ error: "wrong token" });
+    if (userId < 0) {
+      return res.status(400).json({ error: "wrong token" });
+    }
     Users.findOne({
       attributes: ["id", "firstname", "lastname", "email"],
       where: { id: userId }
