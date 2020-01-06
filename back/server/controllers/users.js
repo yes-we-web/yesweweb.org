@@ -13,10 +13,10 @@ module.exports = {
     const password = req.body.password;
 
     if (
-      email == null ||
-      firstname == null ||
-      lastname == null ||
-      password == null
+      email === null ||
+      firstname === null ||
+      lastname === null ||
+      password === null
     ) {
       return res.status(400).json({ error: "missing parameters" });
     }
@@ -65,7 +65,7 @@ module.exports = {
     const email = req.body.email;
     const password = req.body.password;
 
-    if (email == null || password == null) {
+    if (email === null || password === null) {
       return res.status(400).json({ error: "missing paramaters" });
     }
     Users.findOne({
