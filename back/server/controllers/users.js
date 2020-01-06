@@ -6,7 +6,7 @@ const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"
 const PASSWORD_REGEX = /^(?=.*\d).{4,30}$/;
 
 module.exports = {
-  register: function(req, res) {
+  register(req, res) {
     const lastname = req.body.lastname;
     const firstname = req.body.firstname;
     const email = req.body.email;
@@ -38,9 +38,9 @@ module.exports = {
         if (!userFound) {
           bcrypt.hash(password, 5, function(err, bcryptedPassword) {
             const newUser = Users.create({
-              lastname: lastname,
-              firstname: firstname,
-              email: email,
+              lastname,
+              firstname,
+              email,
               password: bcryptedPassword,
               isAdmin: 0
             })
