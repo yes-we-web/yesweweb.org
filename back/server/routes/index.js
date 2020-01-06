@@ -16,8 +16,10 @@ module.exports = router => {
 
   router.post("/api/users/register", usersController.register);
   router.post("/api/users/login", usersController.login);
-  router.get("/api/users/profile", usersController.getUserProfile)
-  router.put("/api/users/profile", usersController.updateUserProfile)
+  router.get("/api/users/profile", usersController.getUserProfile);
+  router.put("/api/users/profile", usersController.updateUserProfile);
+  router.get("/api/users", usersController.list);
+  router.delete("/api/users/:userId", usersController.destroy);
   //Articles
   router.post("/api/articles", articlesController.create);
   router.get("/api/articles", articlesController.list);
