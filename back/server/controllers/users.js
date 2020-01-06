@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-//const jwtUtils = require("../utils/jwt.utils");
+const jwtUtils = require("../utils/jwt.utils");
 //const asyncLib = require("async");
 const Users = require("../models/").Users;
 
@@ -68,8 +68,8 @@ module.exports = {
           ) {
             if (resBycrypt) {
               return res.status(200).json({
-                userId: newUser.id,
-                token: "THE TOKEN"
+                userId: userFound.id,
+                token: jwtUtils.generateTokenForUser(userFound)
               });
             } else {
               return res.status(403).json({ error: "invalid password" });
