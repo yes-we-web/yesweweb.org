@@ -158,14 +158,14 @@ module.exports = {
   },
   async list(req, res) {
     let result = await Users.findAll({})
-      .then((users) => res.status(200).send(users))
+      .then(users => res.status(200).send(users))
       .catch(error => res.status(400).send(error));
     return result;
   },
 
   async destroy(req, res) {
     let result = Users.findByPk(req.params.userId)
-      .then((user) => {
+      .then(user => {
         if (!user) {
           return res.status(400).send({
             message: "Users Not Found"
@@ -174,9 +174,9 @@ module.exports = {
         return user
           .destroy()
           .then(() => res.status(204).send())
-          .catch((error) => res.status(400).send(error));
+          .catch(error => res.status(400).send(error));
       })
-      .catch((error) => res.status(400).send(error));
+      .catch(error => res.status(400).send(error));
     return result;
   }
 };
