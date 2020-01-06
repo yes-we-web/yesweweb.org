@@ -54,7 +54,7 @@ module.exports = {
     const email = req.body.email;
     const password = req.body.password;
 
-    if (email == nul || password == nul) {
+    if (email == null || password == null) {
       return res.status(400).json({ error: "missing paramaters" });
     }
     Users.findOne({
