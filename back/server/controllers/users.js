@@ -61,7 +61,7 @@ module.exports = {
         return res.status(500).json({ error: "unable to verify user" });
       });
   },
-  login: function(req, res) {
+  login(req, res) {
     const email = req.body.email;
     const password = req.body.password;
 
