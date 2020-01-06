@@ -113,5 +113,13 @@ module.exports = {
       .catch(function(err) {
         res.status(500).json({ error: "cannot fetch user" });
       });
-  }
-};
+  }, updateUserProfile: function(req, res) {
+
+    const headerAuth  = req.headers['authorization'];
+    const userId      = jwtUtils.getUserId(headerAuth);
+
+    const firstname=req.body.firstname;
+    const lastname =req.body.lastname;
+    const email=req.body.email;
+    
+  
