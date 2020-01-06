@@ -69,7 +69,7 @@ module.exports = {
       return res.status(400).json({ error: "missing paramaters" });
     }
     Users.findOne({
-      where: { email: email }
+      where: { email }
     })
       .then(function(userFound) {
         if (userFound) {
