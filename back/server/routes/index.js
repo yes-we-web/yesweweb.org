@@ -11,6 +11,12 @@ module.exports = router => {
       message: "Welcome to the yesweweb API!"
     })
   );
+
+  // Users
+
+  router.post("/api/users/register", usersController.register);
+  router.post("/api/users/login", usersController.login);
+
   //Articles
   router.post("/api/articles", articlesController.create);
   router.get("/api/articles", articlesController.list);
