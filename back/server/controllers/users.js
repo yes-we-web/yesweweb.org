@@ -116,7 +116,7 @@ module.exports = {
         res.status(500).json({ error: "cannot fetch user" });
       });
   },
-  updateUserProfile: function(req, res) {
+  updateUserProfile(req, res) {
     const headerAuth = req.headers["authorization"];
     const userId = jwtUtils.getUserId(headerAuth);
 
