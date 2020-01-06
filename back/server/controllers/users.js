@@ -3,9 +3,8 @@ const jwtUtils = require("../../utils/jwt.utils");
 //const asyncLib = require("async");
 const Users = require("../models/").Users;
 
-
-const EMAIL_REGEX     = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const PASSWORD_REGEX  = /^(?=.*\d).{4,30}$/;
+const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const PASSWORD_REGEX = /^(?=.*\d).{4,30}$/;
 
 module.exports = {
   register: function(req, res) {
@@ -21,14 +20,18 @@ module.exports = {
       password == null
     ) {
       return res.status(400).json({ error: "missing parameters" });
-    };   
-    if (!EMAIL_REGEX.test(email)) {
-      return res.status(400).json({ 'error': 'email is not valid' });
-    };
-    if (!PASSWORD_REGEX.test(password)) {
-      return res.status(400).json({ 'error': 'password invalid (must length 4 - 30 and include 1 number at least)' });
     }
-  
+    if (!EMAIL_REGEX.test(email)) {
+      return res.status(400).json({ error: "email is not valid" });
+    }
+    if (!PASSWORD_REGEX.test(password)) {
+      return res
+        .status(400)
+        .json({
+          error:
+            "password invalid (must length 4 - 30 and include 1 number at least)"
+        });
+    }
 
     Users.findOne({
       attributes: ["email"],
@@ -94,23 +97,24 @@ module.exports = {
         return res.status(500).json({ error: "unable to verify user" });
       });
   },
-  getUserProfile: function(req,res){
-    const headerAuth=req.headers['authorization'];
-    const userId      = jwtUtils.getUserId(headerAuth);
+  getUserProfile: function(req, res) {
+    const headerAuth = req.headers["authorization"];
+    const userId = jwtUtils.getUserId(headerAuth);
 
-  if (userId < 0)
-    return res.status(400).json({ 'error': 'wrong token' });
-   Users.findOne({
-      attributes: [ 'id','firstname','lastname','email' ],
+    if (userId < 0) return res.status(400).json({ error: "wrong token" });
+    Users.findOne({
+      attributes: ["id", "firstname", "lastname", "email"],
       where: { id: userId }
-    }).then(function(user) {
-      if (user) {
-        res.status(201).json(user);
-      } else {
-        res.status(404).json({ 'error': 'user not found' });
-      }
-    }).catch(function(err) {
-      res.status(500).json({ 'error': 'cannot fetch user' });
-    });
+    })
+      .then(function(user) {
+        if (user) {
+          res.status(201).json(user);
+        } else {
+          res.status(404).json({ error: "user not found" });
+        }
+      })
+      .catch(function(err) {
+        res.status(500).json({ error: "cannot fetch user" });
+      });
   }
 };
