@@ -50,5 +50,37 @@ module.exports = {
         return res.status(500).json({ error: "unable to verify user" });
       });
   },
-  login: function(req, res) {}
+  login: function(req, res) {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    if (email == nul || password == nul) {
+      return res.status(400).json({ error: "missing paramaters" });
+    }
+    Users.findOne({
+      where: { email: email }
+    })
+      .then(function(userFound) {
+        if (userFound) {
+          bcrypt.compare(password, userFound.password, function(
+            errBycrypt,
+            resBycrypt
+          ) {
+            if (resBycrypt) {
+              return res.status(200).json({
+                userId: newUser.id,
+                token: "THE TOKEN"
+              });
+            } else {
+              return res.status(403).json({ error: "invalid password" });
+            }
+          });
+        } else {
+          return res.status(404).json({ error: "user not exist in DB" });
+        }
+      })
+      .catch(function(err) {
+        return res.status(500).json({ error: "unable to verify user" });
+      });
+  }
 };
