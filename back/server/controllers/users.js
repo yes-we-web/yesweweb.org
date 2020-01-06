@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const jwtUtils = require("../utils/jwt.utils");
+const jwtUtils = require("../../utils/jwt.utils");
 //const asyncLib = require("async");
 const Users = require("../models/").Users;
 
