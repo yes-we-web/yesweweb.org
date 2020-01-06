@@ -5,6 +5,7 @@ const Users = require("../models/").Users;
 
 
 const EMAIL_REGEX     = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const PASSWORD_REGEX  = /^(?=.*\d).{4,30}$/;
 
 module.exports = {
   register: function(req, res) {
@@ -24,6 +25,9 @@ module.exports = {
     if (!EMAIL_REGEX.test(email)) {
       return res.status(400).json({ 'error': 'email is not valid' });
     };
+    if (!PASSWORD_REGEX.test(password)) {
+      return res.status(400).json({ 'error': 'password invalid (must length 4 - 30 and include 1 number at least)' });
+    }
   
 
     Users.findOne({
