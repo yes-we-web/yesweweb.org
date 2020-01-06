@@ -93,5 +93,24 @@ module.exports = {
       .catch(function(err) {
         return res.status(500).json({ error: "unable to verify user" });
       });
+  },
+  getUserProfile: function(req,res){
+    const headerAuth=req.headers['authorization'];
+    const userId      = jwtUtils.getUserId(headerAuth);
+
+  if (userId < 0)
+    return res.status(400).json({ 'error': 'wrong token' });
+   Users.findOne({
+      attributes: [ 'id','firstname','lastname','email' ],
+      where: { id: userId }
+    }).then(function(user) {
+      if (user) {
+        res.status(201).json(user);
+      } else {
+        res.status(404).json({ 'error': 'user not found' });
+      }
+    }).catch(function(err) {
+      res.status(500).json({ 'error': 'cannot fetch user' });
+    });
   }
 };
