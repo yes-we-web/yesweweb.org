@@ -165,7 +165,7 @@ module.exports = {
 
   async destroy(req, res) {
     let result = Users.findByPk(req.params.userId)
-      .then(user => {
+      .then((user) => {
         if (!user) {
           return res.status(400).send({
             message: "Users Not Found"
