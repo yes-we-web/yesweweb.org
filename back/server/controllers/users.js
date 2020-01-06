@@ -122,4 +122,31 @@ module.exports = {
     const lastname =req.body.lastname;
     const email=req.body.email;
     
-  
+Users.findOne({
+  attributes:['id','firstname','lastname','email'],
+  where:{id:userId}
+}).then(function(userFound){
+if(userFound){
+  userFound.update({
+    firstname: (firstname ? firstname : userFound.firstname),
+              lastname: (lastname ? lastname : userFound.firstname),
+              email: (email ?email : userFound.email)
+  }).then(function(){
+    if (userFound) {
+      return res.status(201).json(userFound);
+    } else {
+      return res.status(500).json({ 'error': 'cannot update user profile' });
+    }
+  }).catch(function(err){
+    return res.status(500).json({error:"cannot update user"})
+  });
+
+}else{ res.status(404).json({error:"user not found"})}
+
+}).catch(function(err){
+  return res.status(500).json( {error: 'unable to verify user'});
+});
+    
+      
+  }
+};
