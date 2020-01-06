@@ -55,7 +55,11 @@ Les visiteurs externes à la formation (patron, personnes intéressées par la f
 
 Un thème global bleu et vert aux couleurs de Yes We Web, bien organisé, classé par hashtag et couleurs.
 
-ATTENTE CHARTE GRAPHIQUE..
+Typographie souhaitée :
+
+**Oswald Semi-Bold** ou **Oswald Light**.
+
+**Roboto Condensed Bold** ou **Roboto Condensed Regular**.
 
 Exemples de sites que le client aime : <https://scotch.io/>
 
