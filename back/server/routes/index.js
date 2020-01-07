@@ -3,13 +3,23 @@ const express = require("express");
 const articlesController = require("../controllers").articles;
 const commentsController = require("../controllers").comments;
 const categoriesController = require("../controllers").categories;
+const usersController = require("../controllers").users;
 
-module.exports = (router) => {
+module.exports =(router) => {
   router.get("/api", (req, res) =>
     res.status(200).send({
       message: "Welcome to the yesweweb API!"
     })
   );
+
+  // Users
+
+  router.post("/api/users/register", usersController.register);
+  router.post("/api/users/login", usersController.login);
+  router.get("/api/users/profile", usersController.getUserProfile);
+  router.put("/api/users/profile", usersController.updateUserProfile);
+  router.get("/api/users", usersController.list);
+  router.delete("/api/users/:userId", usersController.destroy);
   //Articles
   router.post("/api/articles", articlesController.create);
   router.get("/api/articles", articlesController.list);
@@ -28,7 +38,10 @@ module.exports = (router) => {
     commentsController.destroy
   );
   //Categories
-  router.post("/api/articles/:articleId/categories", categoriesController.create);
+  router.post(
+    "/api/articles/:articleId/categories",
+    categoriesController.create
+  );
   router.put(
     "/api/articles/:articleId/comments/:commentsId",
     commentsController.update
