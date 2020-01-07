@@ -1,16 +1,12 @@
 const Article = require("../models").Article;
 const Comments = require("../models").Comments;
 const Categories = require("../models").Categories;
+const jwtUtils = require("../../utils/jwt.utils");
 
 module.exports = {
-  async create(req, res) {
-    let result = await Article.create({
-      title: req.body.title,
-      content: req.body.content
-    })
-      .then((article) => res.status(201).send(article))
-      .catch((error) => res.status(400).send(error));
-    return result;
+  create(req, res) {
+    const headerAuth = req.headers["authorization"];
+    const userId = jwtUtils.getUserId(headerAuth);
   },
   // list comments in article
   async list(req, res) {
@@ -26,13 +22,13 @@ module.exports = {
         }
       ]
     })
-      .then((articles) => res.status(200).send(articles))
-      .catch((error) => res.status(400).send(error));
+      .then(articles => res.status(200).send(articles))
+      .catch(error => res.status(400).send(error));
     return result;
   },
   async destroy(req, res) {
     let result = Article.findByPk(req.params.articleId)
-      .then((article) => {
+      .then(article => {
         if (!article) {
           return res.status(400).send({
             message: "Article Not Found"
@@ -41,9 +37,9 @@ module.exports = {
         return article
           .destroy()
           .then(() => res.status(204).send())
-          .catch((error) => res.status(400).send(error));
+          .catch(error => res.status(400).send(error));
       })
-      .catch((error) => res.status(400).send(error));
+      .catch(error => res.status(400).send(error));
     return result;
   },
 
@@ -54,12 +50,10 @@ module.exports = {
           model: Comments,
           as: "comments"
         },
-      {model:Categories,
-        as:"categories"
-      }
+        { model: Categories, as: "categories" }
       ]
     })
-      .then((article) => {
+      .then(article => {
         if (!article) {
           return res.status(404).send({
             message: "Article Not Found"
@@ -67,7 +61,7 @@ module.exports = {
         }
         return res.status(200).send(article);
       })
-      .catch((error) => res.status(400).send(error));
+      .catch(error => res.status(400).send(error));
     return result;
   },
   async update(req, res) {
@@ -77,12 +71,10 @@ module.exports = {
           model: Comments,
           as: "comments"
         },
-      {model:Categories,
-        as:"categories"
-      }
+        { model: Categories, as: "categories" }
       ]
     })
-      .then((article) => {
+      .then(article => {
         if (!article) {
           return res.status(404).send({
             message: "Article Not Found"
@@ -94,9 +86,9 @@ module.exports = {
             content: req.body.content || article.content
           })
           .then(() => res.status(200).send(article)) // Send back the updated article.
-          .catch((error) => res.status(400).send(error));
+          .catch(error => res.status(400).send(error));
       })
-      .catch((error) => res.status(400).send(error));
+      .catch(error => res.status(400).send(error));
     return result;
   }
 };
