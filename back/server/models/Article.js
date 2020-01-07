@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     "Article",
     {
       title: DataTypes.STRING,
-      content: DataTypes.STRING
+      content: DataTypes.STRING,
+      likes: DataTypes.INTEGER
     },
     {}
   );
@@ -16,6 +17,11 @@ module.exports = (sequelize, DataTypes) => {
     Article.hasMany(models.Categories, {
       foreignKey: "articleId",
       as: "categories"
+    });
+    Article.belongsTo(models.Users, {
+      foreignKey: {
+        allowNull: false
+      }
     });
   };
   return Article;
