@@ -1,12 +1,17 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
-  const Categories = sequelize.define("Categories", {
-    content: DataTypes.STRING
-  }, {});
+  const Categories = sequelize.define(
+    "Categories",
+    {
+      content: DataTypes.STRING,
+      articleId: DataTypes.INTEGER
+    },
+    {}
+  );
   Categories.associate = function(models) {
-    Categories.belongsTo(models.Article, {
+    Categories.belongsTo(models.Articles, {
       foreignKey: "articleId",
-      onDelete: "CASCADE",
+      onDelete: "CASCADE"
     });
   };
   return Categories;
