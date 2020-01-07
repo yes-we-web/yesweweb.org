@@ -1,7 +1,7 @@
-const Article = require("../models").Article;
+const Articles = require("../models").Articles;
 const Comments = require("../models").Comments;
 const Categories = require("../models").Categories;
-const Users = require("../controllers").Users;
+const Users = require("../models").Users;
 const jwtUtils = require("../../utils/jwt.utils");
 
 module.exports = {
@@ -21,10 +21,11 @@ module.exports = {
     })
       .then(function(userFound) {
         if (userFound) {
-          Article.create({
+          Articles.create({
             title: title,
             content: content,
-            likes: 0
+            likes: 0,
+            userId: userFound.id
           }).then(function(newMessage) {
             if (newMessage) {
               return res.status(201).json(newMessage);
@@ -42,7 +43,7 @@ module.exports = {
   },
   // list comments in article
   async list(req, res) {
-    let result = await Article.findAll({
+    let result = await Articles.findAll({
       include: [
         {
           model: Categories,
@@ -59,7 +60,7 @@ module.exports = {
     return result;
   },
   async destroy(req, res) {
-    let result = Article.findByPk(req.params.articleId)
+    let result = Articles.findByPk(req.params.articleId)
       .then(article => {
         if (!article) {
           return res.status(400).send({
@@ -76,7 +77,7 @@ module.exports = {
   },
 
   async retrieve(req, res) {
-    let result = await Article.findByPk(req.params.articleId, {
+    let result = await Articles.findByPk(req.params.articleId, {
       include: [
         {
           model: Comments,
@@ -97,7 +98,7 @@ module.exports = {
     return result;
   },
   async update(req, res) {
-    let result = await Article.findByPk(req.params.articleId, {
+    let result = await Articles.findByPk(req.params.articleId, {
       include: [
         {
           model: Comments,
