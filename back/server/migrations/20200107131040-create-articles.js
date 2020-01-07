@@ -14,6 +14,16 @@ module.exports = {
       content: {
         type: Sequelize.STRING
       },
+      likes: {
+        type: Sequelize.INTEGER
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Users",
+          key: "id"
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

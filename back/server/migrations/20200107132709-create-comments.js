@@ -1,7 +1,7 @@
 "use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("Categories", {
+    return queryInterface.createTable("Comments", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,13 +11,8 @@ module.exports = {
       content: {
         type: Sequelize.STRING
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+      complete: {
+        type: Sequelize.BOOLEAN
       },
       articleId: {
         type: Sequelize.INTEGER,
@@ -25,12 +20,20 @@ module.exports = {
         references: {
           model: "Articles",
           key: "id",
-          as: "articleId",
-        },
+          as: "articleId"
+        }
       },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("Categories");
+    return queryInterface.dropTable("Comments");
   }
 };
