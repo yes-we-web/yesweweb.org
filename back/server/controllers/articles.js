@@ -1,12 +1,44 @@
 const Article = require("../models").Article;
 const Comments = require("../models").Comments;
 const Categories = require("../models").Categories;
+const Users = require("../controllers").Users;
 const jwtUtils = require("../../utils/jwt.utils");
 
 module.exports = {
   create(req, res) {
     const headerAuth = req.headers["authorization"];
     const userId = jwtUtils.getUserId(headerAuth);
+
+    const title = req.body.title;
+    const content = req.body.content;
+
+    if (title === null || content === null) {
+      return res.status(400).json({ error: "missing parameters" });
+    }
+
+    Users.findOne({
+      where: { id: userId }
+    })
+      .then(function(userFound) {
+        if (userFound) {
+          Article.create({
+            title: title,
+            content: content,
+            likes: 0
+          }).then(function(newMessage) {
+            if (newMessage) {
+              return res.status(201).json(newMessage);
+            } else {
+              return res.status(500).json({ error: "cannot post article" });
+            }
+          });
+        } else {
+          res.status(404).json({ error: "user not found " });
+        }
+      })
+      .catch(function(err) {
+        return res.status(500).json({ error: "unable to verify user" });
+      });
   },
   // list comments in article
   async list(req, res) {
