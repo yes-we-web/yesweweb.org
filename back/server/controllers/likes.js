@@ -11,7 +11,7 @@ module.exports = {
 
     let articleId = parseInt(req.params.articleId);
 
-    if (article <= 0) {
+    if (articleId <= 0) {
       return res.status(400).json({ error: "invalid parameters" });
     }
 
