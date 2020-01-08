@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Likes.associate = function(models) {
-    Jsers.belongsToMany(models.Articles, {
+    Users.belongsToMany(models.Articles, {
       through: models.Likes,
       foreignKey: "userId",
       otherKey: "articleId"
