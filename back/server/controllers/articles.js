@@ -22,7 +22,7 @@ module.exports = {
       .then(function(userFound) {
         if (userFound) {
           Articles.create({
-            title: title,
+            title,
             content: content,
             likes: 0,
             userId: userFound.id
