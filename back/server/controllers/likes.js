@@ -27,8 +27,8 @@ module.exports = {
               if (userFound) {
                 Likes.findOne({
                   where: {
-                    userId: userId,
-                    articleId: articleId
+                    userId,
+                    articleId
                   }
                 })
                   .then(function(ifUserAlreadyLiked) {
