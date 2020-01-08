@@ -55,7 +55,7 @@ module.exports = {
         }
       ]
     })
-      .then(articles => res.status(200).send(articles))
+      .then( (articles) => res.status(200).send(articles))
       .catch(error => res.status(400).send(error));
     return result;
   },
@@ -107,7 +107,7 @@ module.exports = {
         { model: Categories, as: "categories" }
       ]
     })
-      .then(article => {
+      .then( (article) => {
         if (!article) {
           return res.status(404).send({
             message: "Article Not Found"
@@ -121,7 +121,7 @@ module.exports = {
           .then(() => res.status(200).send(article)) // Send back the updated article.
           .catch(error => res.status(400).send(error));
       })
-      .catch(error => res.status(400).send(error));
+      .catch( (error) => res.status(400).send(error));
     return result;
   }
 };
