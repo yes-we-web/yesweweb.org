@@ -44,7 +44,7 @@ Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures p
 -   [Postgresql](https://github.com/postgres/postgres) - Système de base données relationnelle objet open source.
 -   [Mocha](https://github.com/mochajs/mocha) - Cadre de test Javascript pour node.js et le navigateur.
 -   [Chai](https://github.com/chaijs/chai) - Cadre d'assertion BDD / TDD pour node.js et le navigateur.
--   [Passport](https://github.com/jaredhanson/passport) - Middleware d'authentification pour Node.js.
+-   
 
 **Auteurs**
 
