@@ -23,7 +23,7 @@ module.exports = {
         if (userFound) {
           Articles.create({
             title,
-            content: content,
+            content,
             likes: 0,
             userId: userFound.id
           }).then(function(newMessage) {
