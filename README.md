@@ -45,6 +45,7 @@ Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures p
 -   [Mocha](https://github.com/mochajs/mocha) - Cadre de test Javascript pour node.js et le navigateur.
 -   [Chai](https://github.com/chaijs/chai) - Cadre d'assertion BDD / TDD pour node.js et le navigateur.
 -   [Jwt](https://github.com/lcobucci/jwt) - Une bibliothèque simple pour travailler avec JSON Web Token et JSON Web Signature.
+-   [Bcrypt](https://github.com/kelektiv/node.bcrypt.js) - Une bibliothèque pour vous aider à hacher les mots de passe.
 
 **Auteurs**
 
