@@ -4,12 +4,19 @@ const articlesController = require("../controllers").articles;
 const commentsController = require("../controllers").comments;
 const categoriesController = require("../controllers").categories;
 const usersController = require("../controllers").users;
+const likesController = require("../controllers").likes;
 
-module.exports =(router) => {
+module.exports = router => {
   router.get("/api", (req, res) =>
     res.status(200).send({
       message: "Welcome to the yesweweb API!"
     })
+  );
+
+  // Likes
+  router.post(
+    "/api/articles/:articleId/reaction/like",
+    likesController.likePost
   );
 
   // Users
