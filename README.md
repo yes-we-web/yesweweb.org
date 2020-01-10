@@ -17,7 +17,8 @@ This repos contain the community blog of promotion 2 "Yes We Web" & other upcomi
 -   [Postgresql](https://github.com/postgres/postgres) - Open source object-relational database system.
 -   [Mocha](https://github.com/mochajs/mocha) - Javascript test framework for node.js & the browser.
 -   [Chai](https://github.com/chaijs/chai) - BDD / TDD assertion framework for node.js and the browser.
--   [Passport](https://github.com/jaredhanson/passport) - Authentication middleware for Node.js.
+-   [Jwt](https://github.com/lcobucci/jwt) - A simple library to work with JSON Web Token and JSON Web Signature.
+-   [Bcrypt](https://github.com/kelektiv/node.bcrypt.js) - A library to help you hash passwords.
 
 **Authors**
 
@@ -44,7 +45,8 @@ Ce repo contient le blog communautaire de la promo 2 Yes We Web et des futures p
 -   [Postgresql](https://github.com/postgres/postgres) - Système de base données relationnelle objet open source.
 -   [Mocha](https://github.com/mochajs/mocha) - Cadre de test Javascript pour node.js et le navigateur.
 -   [Chai](https://github.com/chaijs/chai) - Cadre d'assertion BDD / TDD pour node.js et le navigateur.
--   [Passport](https://github.com/jaredhanson/passport) - Middleware d'authentification pour Node.js.
+-   [Jwt](https://github.com/lcobucci/jwt) - Une bibliothèque simple pour travailler avec JSON Web Token et JSON Web Signature.
+-   [Bcrypt](https://github.com/kelektiv/node.bcrypt.js) - Une bibliothèque pour vous aider à hacher les mots de passe.
 
 **Auteurs**
 
