@@ -1,16 +1,6 @@
 <template>
   <v-app dark>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-      color="#6A76AB"
-      dark
-      shrink-on-scroll
-      prominent
-      src="https://picsum.photos/1920/1080?random"
-      fade-img-on-scroll
-    ></v-app-bar>
+    <navBar />
 
     <v-content>
       <v-container>
@@ -25,5 +15,11 @@
 </template>
 
 <script>
-export default {};
+import navBar from "@/components/navBar.vue";
+
+export default {
+  components: {
+    navBar
+  }
+};
 </script>
