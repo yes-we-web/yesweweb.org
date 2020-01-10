@@ -16,12 +16,20 @@
 
     <v-toolbar-title>
       <span>Yes</span>
-      <span class="font-weight-light">we</span>
-      <span>web</span>
+      <span class="font-weight-light">We</span>
+      <span>Web</span>
     </v-toolbar-title>
 
     <v-spacer></v-spacer>
-    <v-text-field sm flat hide-details label="Search" style="max-width: 12vw " color="white">
+    <v-text-field
+      sm
+      flat
+      hide-details
+      label="Search"
+      style="max-width: 12vw "
+      color="white"
+      class="mt-4"
+    >
       <input
         id="search"
         type="text"
@@ -36,8 +44,8 @@
         dir="auto"
       />
     </v-text-field>
-    <v-btn icon>
-      <v-icon large>mdi-magnify</v-icon>
+    <v-btn icon class="mt-3">
+      <v-icon>mdi-magnify</v-icon>
     </v-btn>
 
     <template v-slot:extension>
@@ -57,9 +65,10 @@
         <v-tab>Partenaires</v-tab>
       </v-tabs>
 
-      <v-btn icon>
-        <v-icon large>mdi-account</v-icon>
-      </v-btn>
+      <v-tabs right background-color="transparent" color="white">
+        <v-tab>s'enregistrer</v-tab>
+        <v-img src="avatarYWW.png" style="max-width:4vw"></v-img>
+      </v-tabs>
     </template>
   </v-app-bar>
 </template>
