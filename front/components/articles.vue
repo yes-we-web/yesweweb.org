@@ -1,6 +1,3 @@
-
-
-
 <template>
   <v-container fluid>
     <v-row>
