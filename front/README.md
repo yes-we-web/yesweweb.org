@@ -1,6 +1,6 @@
 # front
 
-> My groovy Nuxt.js project
+> My exquisite Nuxt.js project
 
 ## Build Setup
 
