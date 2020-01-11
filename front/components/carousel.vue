@@ -68,6 +68,9 @@ export default {
         },
         {
           src: "CarouselYesWeWeb/yesWeWeb2.jpg "
+        },
+        {
+          src: "CarouselYesWeWeb/ forumFondationDesPossibles.jpg "
         }
       ]
     };
