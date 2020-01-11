@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid>
-    <v-row class="ml-11">
+  <v-container>
+    <v-row class="ml-12">
       <v-col cols="12">
         <v-row :align="alignment" :justify="justify" style="height: auto;">
           <div class="map mt-6">
@@ -66,7 +66,7 @@ export default {};
 
 <style scoped>
 iframe {
-  border-radius: 1.875rem;
+  border-radius: 1.5rem;
 }
 
 h2 {
@@ -83,6 +83,6 @@ p {
 }
 
 .fiche {
-  border-radius: 1.875rem;
+  border-radius: 1.5rem;
 }
 </style>
