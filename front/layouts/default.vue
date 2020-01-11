@@ -1,14 +1,12 @@
 <template>
   <v-app dark>
     <navBar />
-
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <navBarCategories />
+      <nuxt />
     </v-content>
 
-    <v-footer :fixed="fixed" app>
+    <v-footer>
       <span>&copy; 2019</span>
     </v-footer>
   </v-app>
@@ -16,10 +14,12 @@
 
 <script>
 import navBar from "@/components/navBar.vue";
+import navBarCategories from "@/components/navBarCategories.vue";
 
 export default {
   components: {
-    navBar
+    navBar,
+    navBarCategories
   }
 };
 </script>

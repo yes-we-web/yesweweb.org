@@ -36,7 +36,7 @@ export default {};
 
 <style scoped>
 .fiche {
-  border-radius: 1.875rem;
+  border-radius: 1.5rem;
 }
 
 h1 {
