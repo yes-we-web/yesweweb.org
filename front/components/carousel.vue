@@ -1,7 +1,13 @@
 <template>
-  <v-carousel cycle height="800" hide-delimiter-background show-arrows-on-hover>
+  <v-carousel
+    class="mb-12"
+    cycle
+    height="800"
+    hide-delimiter-background
+    show-arrows-on-hover
+  >
     <v-carousel-item
-      v-for="(item,i) in items"
+      v-for="(item, i) in items"
       :key="i"
       :src="item.src"
       reverse-transition="fade-transition"
@@ -39,5 +45,4 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
