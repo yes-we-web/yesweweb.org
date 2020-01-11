@@ -7,7 +7,7 @@
       <v-col cols="12">
         <v-row :align="alignment" :justify="justify" style="height: auto;">
           <div v-for="article in articles" :key="article" class="ma-1 pa-6" outlined tile>
-            <v-card class="mx-auto" max-width="520">
+            <v-card class="mx-auto" :elevation="24" max-width="520">
               <v-img
                 class="white--text align-end"
                 height="200px"
