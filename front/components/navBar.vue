@@ -7,26 +7,42 @@
     dark
     shrink-on-scroll
     prominent
-    src="https://picsum.photos/1920/1080?random"
-    fade-img-on-scroll
+    src="blueBannerXlYWW.png"
   >
     <template v-slot:img="{ props }">
-      <v-img v-bind="props" gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"></v-img>
+      <v-img v-bind="props"></v-img>
     </template>
 
-    <v-toolbar-title>Yes We Web</v-toolbar-title>
+    <v-toolbar-title>Bienvenue user. firstname</v-toolbar-title>
 
     <v-spacer></v-spacer>
-
+    <v-text-field sm flat hide-details label="Search" style="max-width: 12vw " color="white">
+      <input
+        id="search"
+        type="text"
+        class="ds-input"
+        autocomplete="off"
+        spellcheck="false"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-owns="algolia-autocomplete-listbox-0"
+        style
+        dir="auto"
+      />
+    </v-text-field>
     <v-btn icon>
-      <v-icon>mdi-magnify</v-icon>
+      <v-img src="avatarYWW.png" style="max-width:3vw"></v-img>
     </v-btn>
 
     <template v-slot:extension>
-      <v-tabs align-with-title background-color="transparent">
+      <v-tabs align-with-title background-color="transparent" color="white">
         <v-tab>Catégories</v-tab>
         <v-tab>Articles</v-tab>
         <v-tab>Nos Partenaires</v-tab>
+      </v-tabs>
+      <v-tabs right background-color="transparent" color="white">
+        <v-tab>s'enregistrer</v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
