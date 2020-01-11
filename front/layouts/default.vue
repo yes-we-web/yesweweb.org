@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <navBar />
     <v-content>
       <navBarCategories />
