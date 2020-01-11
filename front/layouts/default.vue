@@ -7,7 +7,7 @@
     </v-content>
 
     <v-footer>
-      <span>&copy; 2019</span>
+      <footerYWW />
     </v-footer>
   </v-app>
 </template>
@@ -15,11 +15,12 @@
 <script>
 import navBar from "@/components/navBar.vue";
 import navBarCategories from "@/components/navBarCategories.vue";
-
+import footerYWW from "@/components/footerYWW.vue";
 export default {
   components: {
     navBar,
-    navBarCategories
+    navBarCategories,
+    footerYWW
   }
 };
 </script>

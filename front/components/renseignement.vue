@@ -42,11 +42,23 @@
                       <span class="display-2">-</span>
                       <p class="font-weight-bold">
                         Tel :
-                        <br />03 20 61 70 70
+                        <br />
+                        <a class="link" href="tel:+33320617070">03 20 61 70 70</a>
+
                         <br />Email :
-                        <br />mathilde.debeaune@groupevitaminet.com
+                        <br />
+                        <a
+                          class="link"
+                          href="mailto:mathilde.debeaune@groupevitaminet.com"
+                        >mathilde.debeaune@groupevitaminet.com</a>
+
                         <br />Site web :
-                        <br />https://simplon.co/groupe-vitamine-t/
+                        <br />
+                        <a
+                          class="link"
+                          href="https://simplon.co/groupe-vitamine-t/"
+                          target="_blank"
+                        >https://simplon.co/groupe-vitamine-t/</a>
                       </p>
                     </div>
                   </v-sheet>
@@ -84,5 +96,9 @@ p {
 
 .fiche {
   border-radius: 1.5rem;
+}
+.link {
+  text-decoration: none;
+  color: white;
 }
 </style>
