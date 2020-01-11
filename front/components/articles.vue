@@ -26,7 +26,9 @@
               </v-card-text>
 
               <v-card-actions>
-                <v-btn color="orange" text>lire</v-btn>
+                <v-btn color="orange" text>
+                  <nuxt-link to="/article">lire</nuxt-link>
+                </v-btn>
               </v-card-actions>
             </v-card>
           </div>
