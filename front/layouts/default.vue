@@ -7,7 +7,7 @@
     </v-content>
 
     <v-footer>
-      <footer />
+      <footerYWW />
     </v-footer>
   </v-app>
 </template>
@@ -15,12 +15,12 @@
 <script>
 import navBar from "@/components/navBar.vue";
 import navBarCategories from "@/components/navBarCategories.vue";
-import footer from "@/components/footer.vue";
+import footerYWW from "@/components/footerYWW.vue";
 export default {
   components: {
     navBar,
     navBarCategories,
-    footer
+    footerYWW
   }
 };
 </script>
