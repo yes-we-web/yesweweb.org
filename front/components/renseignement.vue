@@ -42,7 +42,9 @@
                       <span class="display-2">-</span>
                       <p class="font-weight-bold">
                         Tel :
-                        <br />03 20 61 70 70
+                        <br />
+                        <a class="link" href="tel:+33320617070">03 20 61 70 70</a>
+
                         <br />Email :
                         <br />
                         <a
