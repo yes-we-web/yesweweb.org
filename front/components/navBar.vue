@@ -69,9 +69,6 @@
         <v-tab>s'enregistrer</v-tab>
         <v-img src="avatarYWW.png" style="max-width:4vw"></v-img>
       </v-tabs>
-      <v-tabs right background-color="transparent" color="white">
-        <v-tab>s'enregistrer</v-tab>
-      </v-tabs>
     </template>
   </v-app-bar>
 </template>
