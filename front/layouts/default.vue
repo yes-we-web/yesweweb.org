@@ -3,9 +3,7 @@
     <navBar />
 
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
 
     <v-footer :fixed="fixed" app>
