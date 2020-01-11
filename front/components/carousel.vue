@@ -1,5 +1,5 @@
 <template>
-  <v-carousel cycle height="auto" hide-delimiter-background show-arrows-on-hover>
+  <v-carousel cycle height="800" hide-delimiter-background show-arrows-on-hover>
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -16,49 +16,10 @@ export default {
     return {
       items: [
         {
-          src: "CarouselYesWeWeb/atelierMethodeAgile.jpg  "
-        },
-        {
-          src: "CarouselYesWeWeb/forumEuratechnologie.jpg  "
-        },
-        {
-          src: "CarouselYesWeWeb/hubIntervention.jpg  "
-        },
-        {
-          src: "CarouselYesWeWeb/interventionCNV.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/interventionIngenieurRobotique.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/interventionRH.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/interventionVitamineT.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/interventionWeLoveDevs.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/inzertyIntervention.jpg "
+          src: "CarouselYesWeWeb/yesWeWeb2.jpg "
         },
         {
           src: "CarouselYesWeWeb/journeeTravail.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/premierJourYesWeWeb.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/rencontreApprenantsParrainsHolder.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/rencontreApprenantsParrainsIBM.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/rencontreAvecEntreprise.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/rendezVousParrainsApprenants.jpg "
         },
         {
           src: "CarouselYesWeWeb/simulationEntretien.jpg "
@@ -66,11 +27,12 @@ export default {
         {
           src: "CarouselYesWeWeb/yesWeShare.jpg "
         },
+
         {
-          src: "CarouselYesWeWeb/yesWeWeb2.jpg "
+          src: "CarouselYesWeWeb/rencontreAvecEntreprise.jpg "
         },
         {
-          src: "CarouselYesWeWeb/ forumFondationDesPossibles.jpg "
+          src: "CarouselYesWeWeb/rendezVousParrainsApprenants.jpg "
         }
       ]
     };
