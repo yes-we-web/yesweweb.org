@@ -9,7 +9,6 @@
     src="blueBannerYWW.png"
     fade-img-on-scroll
     height="2rem"
-    class="nav"
   >
     <template v-slot:img="{ props }">
       <v-img v-bind="props"></v-img>
