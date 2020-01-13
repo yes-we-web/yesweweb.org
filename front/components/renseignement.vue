@@ -101,4 +101,9 @@ p {
   text-decoration: none;
   color: white;
 }
+@media (min-width: 1904px) {
+  iframe {
+    margin-left: 60%;
+  }
+}
 </style>
