@@ -17,10 +17,7 @@
 
       <v-card-text class="white--text pt-0">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-          quaerat deserunt assumenda consequatur eveniet consectetur accusantium
-          odio libero, molestias fugiat saepe, quos dolores quia maiores
-          accusamus et reprehenderit distinctio perspiciatis.
+          Fait avec 💖 by the Wolf Team (Donovan, Antoine, Samy) 🇫🇷
         </p>
       </v-card-text>
 
@@ -42,7 +39,7 @@ export default {
       "fab fa-twitter",
       "fab fa-google-plus",
       "fab fa-linkedin",
-      "fab fa-instagram"
+      "fab fa-github"
     ]
   })
 };
