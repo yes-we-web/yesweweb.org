@@ -6,7 +6,7 @@
     dark
     shrink-on-scroll
     prominent
-    src="YWW.png"
+    src="blueBannerYWW.png"
     fade-img-on-scroll
     height="2rem"
   >
