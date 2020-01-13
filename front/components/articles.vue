@@ -1,29 +1,32 @@
-
-
-
 <template>
   <v-container fluid>
     <v-row>
       <v-col cols="12">
         <v-row :align="alignment" :justify="justify" style="height: auto;">
-          <div v-for="article in articles" :key="article" class="ma-3 pa-6" outlined tile>
-            <v-card class="mx-auto" max-width="400">
-              <v-img class="white--text align-end" height="200px" src="boisYWW.png">
-                <v-card-title>{{article.title}}</v-card-title>
-              </v-img>
+          <div v-for="article in articles" :key="article" class="ma-1 pa-6" outlined tile>
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                class="mx-auto"
+                :elevation="hover ? 24 : 2"
+                max-width="520"
+                style="border-radius: 1rem"
+              >
+                <v-img class="white--text align-end" height="200px" src="boisYWW.png">
+                  <v-card-title
+                    class="display-1"
+                    style="text-shadow: 1px 2px 2px black;"
+                  >{{ article.title }}</v-card-title>
+                </v-img>
 
-              <v-card-subtitle class="pb-0">{{article.id}}</v-card-subtitle>
+                <v-card-text class="font-weight-bold" style="text-shadow: 1px 2px 2px black;">
+                  <div>{{ article.User.firstname }} {{ article.User.lastname }}</div>
+                </v-card-text>
 
-              <v-card-text class="text--primary">
-                <div>{{article.content}}</div>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn color="orange" text>Share</v-btn>
-
-                <v-btn color="orange" text>Explore</v-btn>
-              </v-card-actions>
-            </v-card>
+                <v-card-actions>
+                  <v-btn color="orange" text>lire</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-hover>
           </div>
         </v-row>
       </v-col>
@@ -62,5 +65,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

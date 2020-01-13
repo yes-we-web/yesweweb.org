@@ -1,25 +1,26 @@
 <template>
-  <v-app dark>
+  <v-app>
     <navBar />
-
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <navBarCategories />
+      <nuxt />
     </v-content>
 
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2019</span>
+    <v-footer>
+      <footerYWW />
     </v-footer>
   </v-app>
 </template>
 
 <script>
 import navBar from "@/components/navBar.vue";
-
+import navBarCategories from "@/components/navBarCategories.vue";
+import footerYWW from "@/components/footerYWW.vue";
 export default {
   components: {
-    navBar
+    navBar,
+    navBarCategories,
+    footerYWW
   }
 };
 </script>
