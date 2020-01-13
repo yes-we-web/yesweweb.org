@@ -14,7 +14,7 @@
                 <v-img
                   class="white--text align-end"
                   height="200px"
-                  src="https://picsum.photos/1920/1080?random"
+                  src="http://placeimg.com/520/254/tech/grayscale"
                 >
                   <v-card-title
                     class="display-1"
