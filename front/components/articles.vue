@@ -20,7 +20,7 @@
                 <v-img
                   class="white--text align-end"
                   height="200px"
-                  src="http://placeimg.com/520/254/tech/"
+                  src="http://placeimg.com/520/254/tech"
                 >
                   <v-card-title
                     class="display-1"
