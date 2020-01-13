@@ -82,4 +82,10 @@ li {
   text-decoration: none;
   list-style-type: none;
 }
+span {
+  text-shadow: 1px 2px 2px black;
+}
+v-tab {
+  text-shadow: 1px 2px 2px black;
+}
 </style>
