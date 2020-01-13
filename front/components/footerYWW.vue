@@ -1,7 +1,11 @@
 <template>
   <v-footer app padless absolute>
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      rel="stylesheet"
+    />
     <v-card
-      class=" lighten-1 white--text text-center"
+      class="lighten-1 white--text text-center"
       color="transparent"
       style="width:100%"
     >
@@ -17,14 +21,14 @@
           quaerat deserunt assumenda consequatur eveniet consectetur accusantium
           odio libero, molestias fugiat saepe, quos dolores quia maiores
           accusamus et reprehenderit distinctio perspiciatis.
-        </p></v-card-text
-      >
+        </p>
+      </v-card-text>
 
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
         {{ new Date().getFullYear() }} —
-        <strong>&copy;Yes We Web</strong>
+        <strong>©Yes We Web</strong>
       </v-card-text>
     </v-card>
   </v-footer>
