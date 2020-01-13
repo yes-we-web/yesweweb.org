@@ -1,6 +1,6 @@
 <template>
   <div>
-    <parralax />
+    <parallax />
     <contentIndex />
     <renseignement />
     <carousel />
@@ -8,16 +8,14 @@
 </template>
 
 <script>
-import parralax from "@/components/parralax.vue";
-import parralax2 from "@/components/parralax2.vue";
+import parallax from "@/components/parallax.vue";
 import contentIndex from "@/components/contentIndex.vue";
 import renseignement from "@/components/renseignement.vue";
 import carousel from "@/components/carousel.vue";
 
 export default {
   components: {
-    parralax,
-    parralax2,
+    parallax,
     contentIndex,
     renseignement,
     carousel
