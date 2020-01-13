@@ -9,6 +9,7 @@
     src="blueBannerYWW.png"
     fade-img-on-scroll
     height="2rem"
+    class="nav"
   >
     <template v-slot:img="{ props }">
       <v-img v-bind="props"></v-img>
@@ -35,7 +36,10 @@
 
       <v-tabs right background-color="transparent" color="white">
         <v-tab>s'enregistrer</v-tab>
-        <v-img src="avatarYWW.png" style="max-width:3vw"></v-img>
+        <v-tab>
+          se connecter
+          <v-img src="avatarYWW.png" style="max-width:2.75vw" class="ml-2"></v-img>
+        </v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
