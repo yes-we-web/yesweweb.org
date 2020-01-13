@@ -1,5 +1,5 @@
 <template>
-  <v-parallax dark src="background.jpg">
+  <v-parallax dark src="background.jpg" style="height:85vh">
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
         <h4 class="subheading font-weight-bold title" style="color:#55b794">FORMATION</h4>
