@@ -29,16 +29,6 @@ export default {
         },
         {
           src: "CarouselYesWeWeb/simulationEntretien.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/yesWeShare.jpg "
-        },
-
-        {
-          src: "CarouselYesWeWeb/rencontreAvecEntreprise.jpg "
-        },
-        {
-          src: "CarouselYesWeWeb/rendezVousParrainsApprenants.jpg "
         }
       ]
     };
