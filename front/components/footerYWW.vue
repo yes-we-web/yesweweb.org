@@ -28,7 +28,7 @@
 
       <v-card-text class="white--text">
         {{ new Date().getFullYear() }} —
-        <strong>©Yes We Web</strong>
+        <strong>© Yes We Web</strong>
       </v-card-text>
     </v-card>
   </v-footer>
