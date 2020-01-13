@@ -1,5 +1,5 @@
 <template>
-  <v-parallax dark src="bannerYWW.jpg">
+  <v-parallax dark src="background.jpg">
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
         <h4 class="subheading font-weight-bold" style="color:#55b794">FORMATIONS</h4>
