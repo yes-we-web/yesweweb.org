@@ -21,8 +21,7 @@
                   class="white--text align-end"
                   height="200px"
                   src="boisYWW.png"
-                >
-                </v-img>
+                ></v-img>
                 <v-card-title
                   class="display-1"
                   style="text-shadow: 1px 2px 2px black;"
@@ -39,7 +38,14 @@
                 </v-card-text>
 
                 <v-card-actions>
-                  <v-btn class="lire" color="#55b794 " text>lire</v-btn>
+                  <v-btn color="orange" text>Lire +</v-btn>
+
+                  <v-spacer></v-spacer>
+
+                  <v-btn text icon color="red">
+                    <div>{{ article.likes }}</div>
+                    <v-icon>mdi-heart</v-icon>
+                  </v-btn>
                 </v-card-actions>
               </v-card>
             </v-hover>
