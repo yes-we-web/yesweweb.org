@@ -34,6 +34,8 @@
 
                     <v-card-text class="font-weight-bold" style="text-shadow: 1px 2px 2px black;">
                       <div>{{ article.User.firstname }} {{ article.User.lastname }}</div>
+
+                      <div>{{ article.createdAt[8] + article.createdAt[9] + article.createdAt[7] + article.createdAt[5] +article.createdAt[6] + article.createdAt[4] + article.createdAt[0] + article.createdAt[1] + article.createdAt[2] + article.createdAt[3]}}</div>
                     </v-card-text>
 
                     <v-card-actions>
