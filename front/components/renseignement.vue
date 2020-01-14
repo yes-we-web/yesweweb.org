@@ -80,6 +80,7 @@ export default {};
 
 <style scoped>
 iframe {
+  border-radius: 1rem;
 }
 
 h2 {
@@ -97,6 +98,7 @@ p {
 
 .fiche {
   border-top: 3px #55b794 solid;
+  border-radius: 1rem;
 }
 .link {
   text-decoration: none;

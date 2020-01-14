@@ -49,6 +49,7 @@ export default {};
 <style scoped>
 .fiche {
   border-top: 3px #55b794 solid;
+  border-radius: 1rem;
 }
 
 h1 {
