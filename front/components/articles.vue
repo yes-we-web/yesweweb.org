@@ -32,6 +32,19 @@
                       style="text-shadow: 1px 2px 2px black;"
                     >{{ article.title }}</v-card-title>
 
+                    <v-chip
+                      small
+                      class="ma-2"
+                      color="#55b794"
+                      label
+                      text-color="white"
+                      v-for="categories in article.categories"
+                      :key="categories"
+                    >
+                      <v-icon left>mdi-label</v-icon>
+                      <div>{{categories.content}}</div>
+                    </v-chip>
+
                     <v-card-text class="font-weight-bold" style="text-shadow: 1px 2px 2px black;">
                       <div>{{ article.User.firstname }} {{ article.User.lastname }}</div>
 
