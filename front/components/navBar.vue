@@ -30,7 +30,11 @@
           </li>
         </v-tab>
 
-        <v-tab>Partenaires</v-tab>
+        <v-tab>
+          <li>
+            <nuxt-link tag="li" to="/partenaires">Partenaires</nuxt-link>
+          </li>
+        </v-tab>
       </v-tabs>
 
       <v-tabs right background-color="transparent" color="white">
