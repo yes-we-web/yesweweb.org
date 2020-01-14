@@ -22,7 +22,7 @@
                     class="fiche"
                     :width="500"
                     :height="600"
-                    :elevation="24"
+                    :elevation="0"
                     :color="color"
                     :tile="tile"
                   >
@@ -34,23 +34,24 @@
                       <span class="display-2">-</span>
                       <p class="font-weight-bold">
                         2 Boulevard Thomson
-                        <br />59810
-                        <br />Lesquin
-                        <br />Hauts-de-France
+                        <br />59810 <br />Lesquin <br />Hauts-de-France
                       </p>
                       <h2>Contact</h2>
                       <span class="display-2">-</span>
                       <p class="font-weight-bold">
                         Tel :
                         <br />
-                        <a class="link" href="tel:+33320617070">03 20 61 70 70</a>
+                        <a class="link" href="tel:+33320617070"
+                          >03 20 61 70 70</a
+                        >
 
                         <br />Email :
                         <br />
                         <a
                           class="link"
                           href="mailto:mathilde.debeaune@groupevitaminet.com"
-                        >mathilde.debeaune@groupevitaminet.com</a>
+                          >mathilde.debeaune@groupevitaminet.com</a
+                        >
 
                         <br />Site web :
                         <br />
@@ -58,7 +59,8 @@
                           class="link"
                           href="https://simplon.co/groupe-vitamine-t/"
                           target="_blank"
-                        >https://simplon.co/groupe-vitamine-t/</a>
+                          >https://simplon.co/groupe-vitamine-t/</a
+                        >
                       </p>
                     </div>
                   </v-sheet>
@@ -78,7 +80,6 @@ export default {};
 
 <style scoped>
 iframe {
-  border-radius: 1.5rem;
 }
 
 h2 {
@@ -95,7 +96,7 @@ p {
 }
 
 .fiche {
-  border-radius: 1.5rem;
+  border-top: 3px #55b794 solid;
 }
 .link {
   text-decoration: none;
