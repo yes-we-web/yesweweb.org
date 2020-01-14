@@ -22,7 +22,7 @@
                 </v-card-text>
 
                 <v-card-actions>
-                  <v-btn color="orange" text>Voir +</v-btn>
+                  <v-btn color="orange" text>Lire +</v-btn>
 
                   <v-spacer></v-spacer>
 
