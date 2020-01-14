@@ -38,7 +38,7 @@
                 </v-card-text>
 
                 <v-card-actions>
-                  <v-btn color="orange" text>Lire +</v-btn>
+                  <v-btn color="#55b794" text>Lire</v-btn>
 
                   <v-spacer></v-spacer>
 
