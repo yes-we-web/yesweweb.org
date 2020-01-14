@@ -39,7 +39,7 @@
                 </v-card-text>
 
                 <v-card-actions>
-                  <v-btn color="orange" text>lire</v-btn>
+                  <v-btn class="lire" color="#55b794 " text>lire</v-btn>
                 </v-card-actions>
               </v-card>
             </v-hover>
