@@ -1,6 +1,6 @@
-# front
+# yesweweb
 
-> My exquisite Nuxt.js project
+> blog for yesweweb
 
 ## Build Setup
 
