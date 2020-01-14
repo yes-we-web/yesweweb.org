@@ -38,20 +38,19 @@
       </v-tabs>
 
       <v-tabs right background-color="transparent" color="white">
+        <popupRegister />
         <popupLogin />
-        <v-tab>
-          se connecter
-          <v-img src="avatarYWW.png" style="max-width:2.75vw" class="ml-2"></v-img>
-        </v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
 </template>
 
 <script>
+import popupRegister from "@/components/popupRegister.vue";
 import popupLogin from "@/components/popupLogin.vue";
 export default {
   components: {
+    popupRegister,
     popupLogin
   }
 };
