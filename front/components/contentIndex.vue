@@ -31,9 +31,7 @@
                     <v-row align="center" justify="center">
                       <v-col class="text-center" cols="12">
                         <v-container>
-                          <h1 style="color:#55b794">
-                            Description de la formation
-                          </h1>
+                          <h1 style="color:#55b794">Description de la formation</h1>
                           <p>
                             L’Institut Vitamine T propose une formation d’une
                             durée de 8 mois, dont 1 mois d’immersion
@@ -67,9 +65,11 @@
 
 <script>
 export default {
-  data: () => ({
-    fab: false
-  }),
+  data() {
+    return {
+      fab: false
+    };
+  },
 
   methods: {
     onScroll(e) {
