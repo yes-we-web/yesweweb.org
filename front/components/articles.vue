@@ -23,7 +23,7 @@
 
                 <v-card-actions>
                   <v-btn color="orange" text>Voir +</v-btn>
-                  <v-btn text icon color="#3e7cbf">
+                  <v-btn text icon color="red">
                     <div>{{article.likes}}</div>
                     <v-icon>mdi-heart</v-icon>
                   </v-btn>
