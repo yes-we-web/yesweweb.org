@@ -24,7 +24,7 @@
                     class="fiche"
                     :width="1300"
                     :height="250"
-                    :elevation="24"
+                    :elevation="0"
                     :color="color"
                     :tile="tile"
                   >
