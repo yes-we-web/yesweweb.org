@@ -38,7 +38,7 @@
       </v-tabs>
 
       <v-tabs right background-color="transparent" color="white">
-        <v-tab>s'enregistrer</v-tab>
+        <popupLogin />
         <v-tab>
           se connecter
           <v-img src="avatarYWW.png" style="max-width:2.75vw" class="ml-2"></v-img>
@@ -49,7 +49,12 @@
 </template>
 
 <script>
-export default {};
+import popupLogin from "@/components/popupLogin.vue";
+export default {
+  components: {
+    popupLogin
+  }
+};
 </script>
 
 <style lang="scss" scoped>
