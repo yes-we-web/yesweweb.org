@@ -3,7 +3,6 @@
     :clipped-left="clipped"
     fixed
     app
-    dark
     shrink-on-scroll
     prominent
     src="blueBannerYWW.png"
