@@ -36,8 +36,12 @@
       </v-tabs>
 
       <v-tabs right background-color="transparent" color="white">
-        <popupRegister />
-        <popupLogin />
+        <v-tab>
+          <popupRegister />
+        </v-tab>
+        <v-tab>
+          <popupLogin />
+        </v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
