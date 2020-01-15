@@ -1,15 +1,12 @@
 <template>
   <v-app-bar
-    :clipped-left="clipped"
     fixed
     app
-    dark
     shrink-on-scroll
     prominent
     src="blueBannerYWW.png"
     fade-img-on-scroll
     height="2rem"
-    class="nav"
   >
     <template v-slot:img="{ props }">
       <v-img v-bind="props"></v-img>
@@ -31,14 +28,19 @@
           </li>
         </v-tab>
 
-        <v-tab>Partenaires</v-tab>
+        <v-tab>
+          <li>
+            <nuxt-link tag="li" to="/partenaires">Partenaires</nuxt-link>
+          </li>
+        </v-tab>
       </v-tabs>
 
       <v-tabs right background-color="transparent" color="white">
-        <v-tab>s'enregistrer</v-tab>
         <v-tab>
-          se connecter
-          <v-img src="avatarYWW.png" style="max-width:2.75vw" class="ml-2"></v-img>
+          <popupRegister />
+        </v-tab>
+        <v-tab>
+          <popupLogin />
         </v-tab>
       </v-tabs>
     </template>
@@ -46,7 +48,14 @@
 </template>
 
 <script>
-export default {};
+import popupRegister from "@/components/popupRegister.vue";
+import popupLogin from "@/components/popupLogin.vue";
+export default {
+  components: {
+    popupRegister,
+    popupLogin
+  }
+};
 </script>
 
 <style lang="scss" scoped>

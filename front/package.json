@@ -1,8 +1,8 @@
 {
-  "name": "front",
+  "name": "yesweweb",
   "version": "1.0.0",
-  "description": "My exquisite Nuxt.js project",
-  "author": "nasri samy",
+  "description": "blog for yesweweb",
+  "author": "Nasri Samy Gonçalves Antoine Ringot Donovan",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
@@ -11,18 +11,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-brands": "^5.0.13",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
-    "@nuxtjs/axios": "^5.3.6",
+    "nuxt": "^2.0.0",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
-    "nuxt": "^2.0.0",
-    "nuxt-fontawesome": "^0.4.0"
+    "@nuxtjs/axios": "^5.3.6"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0",
-    "@nuxtjs/vuetify": "^1.0.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "@nuxtjs/vuetify": "^1.0.0"
   }
 }
