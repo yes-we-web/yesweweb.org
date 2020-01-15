@@ -7,7 +7,6 @@
             v-scroll="onScroll"
             v-show="fab"
             fab
-            dark
             fixed
             bottom
             right
