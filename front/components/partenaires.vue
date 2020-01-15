@@ -33,20 +33,22 @@
                         style="min-height: 434px"
                       >
                         <v-fade-transition mode="out-in">
-                          <v-row :align="alignment" :justify="justify">
+                          <v-row>
                             <v-col
                               v-for="(image, img) in images"
                               :key="img"
                               cols="6"
                             >
-                              <v-card shaped>
-                                <v-img
-                                  :src="image.src"
-                                  height="180"
-                                  contain
-                                  class="grey lighten-5"
-                                ></v-img>
-                              </v-card>
+                              <a :href="image.href" target="_blank">
+                                <v-card shaped>
+                                  <v-img
+                                    :src="image.src"
+                                    height="180"
+                                    contain
+                                    class="grey lighten-5"
+                                  ></v-img>
+                                </v-card>
+                              </a>
                             </v-col>
                           </v-row>
                         </v-fade-transition>
@@ -69,19 +71,25 @@ export default {
     return {
       images: [
         {
-          src: "LogosPartenaires/logoCampusVT.png"
+          src: "LogosPartenaires/logoCampusVT.png",
+          href: "http://www.groupevitaminet.com/"
         },
         {
-          src: "LogosPartenaires/logoEtat.png"
+          src: "LogosPartenaires/logoEtat.png",
+          href:
+            "https://travail-emploi.gouv.fr/grands-dossiers/plan-d-investissement-dans-les-competences/"
         },
         {
-          src: "LogosPartenaires/logoFondationdesPossibles.jpg"
+          src: "LogosPartenaires/logoFondationdesPossibles.jpg",
+          href: "https://lafondationdespossibles.com/"
         },
         {
-          src: "LogosPartenaires/logoGen.png"
+          src: "LogosPartenaires/logoGen.png",
+          href: "https://www.grandeecolenumerique.fr/"
         },
         {
-          src: "LogosPartenaires/logoMinistreTravail.jpg"
+          src: "LogosPartenaires/logoMinistreTravail.jpg",
+          href: "https://travail-emploi.gouv.fr/"
         }
       ],
       alignmentsAvailable: ["start", "center", "end", "baseline", "stretch"],
