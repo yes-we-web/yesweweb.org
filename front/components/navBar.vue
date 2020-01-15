@@ -1,6 +1,5 @@
 <template>
   <v-app-bar
-    :clipped-left="clipped"
     fixed
     app
     shrink-on-scroll
