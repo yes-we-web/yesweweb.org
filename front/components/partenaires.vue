@@ -19,15 +19,33 @@
           <v-col class="text-center" cols="12">
             <v-container>
               <v-row justify="space-around">
-                <v-sheet class="fiche" :width="1200" :height="650" :elevation="0">
-                  <v-row align="center" justify="center">
+                <v-sheet
+                  class="fiche"
+                  :width="1200"
+                  :height="650"
+                  :elevation="0"
+                >
+                  <v-row class="ml-3" align="center" justify="center">
                     <v-col class="text-center" cols="12">
-                      <v-container class="fill-height" fluid style="min-height: 434px">
+                      <v-container
+                        class="fill-height"
+                        fluid
+                        style="min-height: 434px"
+                      >
                         <v-fade-transition mode="out-in">
-                          <v-row>
-                            <v-col v-for="(image, img) in images" :key="img" cols="6">
+                          <v-row :align="alignment" :justify="justify">
+                            <v-col
+                              v-for="(image, img) in images"
+                              :key="img"
+                              cols="6"
+                            >
                               <v-card shaped>
-                                <v-img :src="image.src" height="180" contain class="grey lighten-5"></v-img>
+                                <v-img
+                                  :src="image.src"
+                                  height="180"
+                                  contain
+                                  class="grey lighten-5"
+                                ></v-img>
                               </v-card>
                             </v-col>
                           </v-row>
@@ -65,11 +83,32 @@ export default {
         {
           src: "LogosPartenaires/logoMinistreTravail.jpg"
         }
-      ]
+      ],
+      alignmentsAvailable: ["start", "center", "end", "baseline", "stretch"],
+      alignment: "center",
+      dense: false,
+      justifyAvailable: [
+        "start",
+        "center",
+        "end",
+        "space-around",
+        "space-between"
+      ],
+      justify: "center",
+      fab: false
     };
+  },
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 20;
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    }
   }
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
