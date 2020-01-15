@@ -18,7 +18,7 @@
             <v-col class="text-center" cols="12">
               <v-container>
                 <v-row justify="space-around">
-                  <v-sheet class="fiche" :width="500" :height="600" :elevation="0" :tile="tile">
+                  <v-sheet class="fiche" :width="500" :height="600" :elevation="0">
                     <div class="ma-5">
                       <h2>Durée de la formation</h2>
                       <span class="display-2">-</span>
