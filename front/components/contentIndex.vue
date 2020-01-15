@@ -10,7 +10,7 @@
             <v-col class="text-center" cols="12">
               <v-container>
                 <v-row justify="space-around">
-                  <v-sheet class="fiche" :width="1300" :height="250" :elevation="0" :color="color">
+                  <v-sheet class="fiche" :width="1300" :height="250" :elevation="0">
                     <v-row align="center" justify="center">
                       <v-col class="text-center" cols="12">
                         <v-container>
