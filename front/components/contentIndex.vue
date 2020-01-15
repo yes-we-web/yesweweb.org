@@ -3,16 +3,7 @@
     <v-container class="scroll-y">
       <v-layout align-center justify-center>
         <v-flex xs12>
-          <v-btn
-            v-scroll="onScroll"
-            v-show="fab"
-            fab
-            fixed
-            bottom
-            right
-            color="primary"
-            @click="toTop"
-          >
+          <v-btn v-scroll="onScroll" v-show="fab" fab fixed bottom right @click="toTop">
             <v-icon class="fas fa-arrow-up"></v-icon>
           </v-btn>
           <v-row align="center" justify="center">
