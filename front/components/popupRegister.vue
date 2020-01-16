@@ -12,17 +12,17 @@
           <v-container>
             <v-row>
               <v-col cols="12" sm="6" md="4">
-                <v-text-field label="Nom*" required></v-text-field>
+                <v-text-field v-model="lastname" label="Nom*" required></v-text-field>
               </v-col>
 
               <v-col cols="12" sm="6" md="4">
-                <v-text-field label="Prénom*" required></v-text-field>
+                <v-text-field v-model="firstname" label="Prénom*" required></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-text-field label="Email*" required></v-text-field>
+                <v-text-field v-model="email" label="Email*" required></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-text-field label="Mot de passe*" type="password" required></v-text-field>
+                <v-text-field v-model="password" label="Mot de passe*" type="password" required></v-text-field>
               </v-col>
             </v-row>
           </v-container>
@@ -31,7 +31,7 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="#55b794" text @click="dialog = false">fermer</v-btn>
-          <v-btn color="#55b794" text @click="dialog = false">enregistrer</v-btn>
+          <v-btn color="#55b794" @click="addUser()">enregistrer</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -39,9 +39,30 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  data: () => ({
-    dialog: false
-  })
+  data() {
+    return {
+      dialog: false,
+      lastname: "",
+      firstname: "",
+      email: "",
+      password: ""
+    };
+  },
+  methods: {
+    addUser() {
+      axios.post("http://localhost:8000/api/users/register", {
+        lastname: this.lastname,
+        firstname: this.firstname,
+        email: this.email,
+        password: this.password
+      });
+      this.lastname = "";
+      this.firstname = "";
+      this.email = "";
+      this.password = "";
+    }
+  }
 };
 </script>
