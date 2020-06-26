@@ -12,13 +12,20 @@
           right
           color="primary"
           @click="toTop"
+          class="scroll"
         >
           <v-icon class="fas fa-arrow-up"></v-icon>
         </v-btn>
         <v-row>
           <v-col cols="12">
             <v-row :align="alignment" :justify="justify" style="height: auto;">
-              <div v-for="article in articles" :key="article" class="ma-1 pa-6" outlined tile>
+              <div
+                v-for="article in articles"
+                :key="article"
+                class="ma-1 pa-6"
+                outlined
+                tile
+              >
                 <v-hover v-slot:default="{ hover }">
                   <v-card
                     class="mx-auto"
@@ -26,11 +33,16 @@
                     width="520"
                     style="border-radius: 1rem"
                   >
-                    <v-img class="white--text align-end" height="200px" src="boisYWW.png"></v-img>
+                    <v-img
+                      class="white--text align-end"
+                      height="200px"
+                      src="boisYWW.png"
+                    ></v-img>
                     <v-card-title
                       class="display-1"
                       style="text-shadow: 1px 2px 2px black;"
-                    >{{ article.title }}</v-card-title>
+                      >{{ article.title }}</v-card-title
+                    >
 
                     <v-chip
                       small
@@ -42,13 +54,31 @@
                       :key="categories"
                     >
                       <v-icon left>mdi-label</v-icon>
-                      <div>{{categories.content}}</div>
+                      <div>{{ categories.content }}</div>
                     </v-chip>
 
-                    <v-card-text class="font-weight-bold" style="text-shadow: 1px 2px 2px black;">
-                      <div>{{ article.User.firstname }} {{ article.User.lastname }}</div>
+                    <v-card-text
+                      class="font-weight-bold"
+                      style="text-shadow: 1px 2px 2px black;"
+                    >
+                      <div>
+                        {{ article.User.firstname }} {{ article.User.lastname }}
+                      </div>
 
-                      <div>{{ article.createdAt[8] + article.createdAt[9] + article.createdAt[7] + article.createdAt[5] +article.createdAt[6] + article.createdAt[4] + article.createdAt[0] + article.createdAt[1] + article.createdAt[2] + article.createdAt[3]}}</div>
+                      <div>
+                        {{
+                          article.createdAt[8] +
+                            article.createdAt[9] +
+                            article.createdAt[7] +
+                            article.createdAt[5] +
+                            article.createdAt[6] +
+                            article.createdAt[4] +
+                            article.createdAt[0] +
+                            article.createdAt[1] +
+                            article.createdAt[2] +
+                            article.createdAt[3]
+                        }}
+                      </div>
                     </v-card-text>
 
                     <v-card-actions>
@@ -112,4 +142,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+  .scroll {
+    display: none;
+  }
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <v-bottom-navigation grow height="2.5rem">
+  <v-bottom-navigation grow height="2.5rem" class="navBar">
     <v-btn :value="activeBtn" style="color:#f2a413" class="subtitle-1">
       <strong style="color:#e24d2c">#HTML</strong>
     </v-btn>
@@ -39,4 +39,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+  .navBar {
+    display: none;
+  }
+}
 </style>

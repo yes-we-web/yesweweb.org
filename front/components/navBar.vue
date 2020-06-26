@@ -8,6 +8,20 @@
     fade-img-on-scroll
     height="2rem"
   >
+    <div class="text-center">
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn class="mediaMenu" text v-model="menu" color="white" dark v-bind="attrs" v-on="on">
+            <i class="fas fa-bars"></i>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item v-for="(item, index) in items" :key="index" :to="item.to">
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </div>
     <template v-slot:img="{ props }">
       <v-img v-bind="props"></v-img>
     </template>
@@ -15,7 +29,7 @@
     <v-spacer></v-spacer>
 
     <template v-slot:extension>
-      <v-tabs align-with-title background-color="transparent" color="white">
+      <v-tabs class="navBar" align-with-title background-color="transparent" color="white">
         <v-tab>
           <li>
             <nuxt-link tag="li" to="/">Accueil</nuxt-link>
@@ -35,7 +49,7 @@
         </v-tab>
       </v-tabs>
 
-      <v-tabs right background-color="transparent" color="white">
+      <v-tabs class="navBar" right background-color="transparent" color="white">
         <v-tab>
           <popupRegister />
         </v-tab>
@@ -54,7 +68,14 @@ export default {
   components: {
     popupRegister,
     popupLogin
-  }
+  },
+  data: () => ({
+    items: [
+      { title: "Accueil", to: "/" },
+      { title: "Articles", to: "/articles" },
+      { title: "Partenaires", to: "/partenaires" }
+    ]
+  })
 };
 </script>
 
@@ -68,5 +89,15 @@ span {
 }
 v-tab {
   text-shadow: 1px 2px 2px black;
+}
+@media screen and (max-width: 800px) {
+  .navBar {
+    display: none;
+  }
+}
+@media screen and (min-width: 801px) {
+  .mediaMenu {
+    display: none;
+  }
 }
 </style>
